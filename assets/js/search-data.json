@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "The most advanced Python script you'll ever see",
+            "title": "First Jupyter Post",
             "content": "swag = &quot;what&#39;s up gamers&quot; print(swag) . what&#39;s up gamers .",
             "url": "https://aidenhuynh.github.io/CS_Swag/2022/09/03/first.html",
             "relUrl": "/2022/09/03/first.html",
@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "First Post?! (with markdown)",
-            "content": "Swag! . &lt;h1&gt;This is my first post (wowzers!)&lt;/h1&gt; . . list of things that i know i have to do for next week currently but will probably drastically change as the week progresses but I don’t know how to make something more useful than a table so this is what we get for now . |Class|Monday|Tuesday|Whensday|Thursday|FriDay| |–|–|–|–|–|–| |BC|labor day|just check the calendar man|–|learning check probably|–| |US history!|labor day|this class doesnt do homework lol|–|leanring rhceck peboablty|| |Am ;pt|labor day|Thesis and parachute!|–|–|lit circle read 20pg/day :()| |Psycholololology|labor day|notso npts|nots notes|uh oh testing time D:| idk| |CS P wit mort|labor day| i have | np odea| wjat o, doing| -| (thanks to Dash for showing me how to make a table with markdown) .",
+            "content": "Swag! . This is my first post (wowzers!) . . list of things that i know i have to do for next week currently but will probably drastically change as the week progresses but I don’t know how to make something more useful than a table so this is what we get for now |Class|Monday|Tuesday|Whensday|Thursday|FriDay| |–|–|–|–|–|–| |BC|labor day|just check the calendar man|–|learning check probably|–| |US history!|labor day|this class doesnt do homework lol|–|leanring rhceck peboablty|!| |Am ;pt|labor day|Thesis and parachute!|–|–|lit circle read 20pg/day :()| |Psycholololology|labor day|notso npts|nots notes|uh oh testing time D:| idk| |CS P wit mort|labor day| i have | np odea| wjat o, doing| -| (thanks to Dash for showing me how to make a table with markdown) .",
             "url": "https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/02/iamdash.html",
             "relUrl": "/markdown/2022/09/02/iamdash.html",
             "date": " • Sep 2, 2022"
