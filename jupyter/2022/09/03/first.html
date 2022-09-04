@@ -140,8 +140,23 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swag</span> <span class="o">=</span> <span class="s2">"what's up gamers"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span>
+
+<span class="n">swag</span> <span class="o">=</span> <span class="s2">"what's up gamers"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">swag</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">cool</span><span class="p">(</span><span class="n">sample</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">cool</span><span class="p">(</span><span class="s2">"Blog: Say something cool"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"something cool"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span><span class="o">+</span><span class="s2">": "</span><span class="o">+</span><span class="n">rsp</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Blog: haha very clever 😐"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span><span class="o">+</span><span class="s2">": "</span><span class="o">+</span><span class="n">rsp</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Blog: haha yeah that is pretty cool!"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -155,6 +170,8 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>what's up gamers
+Blog: Say something cool
+Aiden: poggers
 </pre>
 </div>
 </div>
