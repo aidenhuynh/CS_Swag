@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Loops, Dictionaries, and Lists | coolest blog EVER?! (clickbait)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Loops, Dictionaries, and Lists" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Testing out different loops in combination with lists and dictionaries" />
+<meta property="og:description" content="Testing out different loops in combination with lists and dictionaries" />
+<link rel="canonical" href="https://aidenhuynh.github.io/CS_Swag/jupyter/markdown/2022/09/05/dictionaries-test.html" />
+<meta property="og:url" content="https://aidenhuynh.github.io/CS_Swag/jupyter/markdown/2022/09/05/dictionaries-test.html" />
+<meta property="og:site_name" content="coolest blog EVER?! (clickbait)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Loops, Dictionaries, and Lists" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-05T00:00:00-05:00","datePublished":"2022-09-05T00:00:00-05:00","description":"Testing out different loops in combination with lists and dictionaries","headline":"Loops, Dictionaries, and Lists","mainEntityOfPage":{"@type":"WebPage","@id":"https://aidenhuynh.github.io/CS_Swag/jupyter/markdown/2022/09/05/dictionaries-test.html"},"url":"https://aidenhuynh.github.io/CS_Swag/jupyter/markdown/2022/09/05/dictionaries-test.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CS_Swag/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aidenhuynh.github.io/CS_Swag/feed.xml" title="coolest blog EVER?! (clickbait)" /><link rel="shortcut icon" type="image/x-icon" href="/CS_Swag/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CS_Swag/">coolest blog EVER?! (clickbait)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CS_Swag/about/">😂😂😂 WHO DID THIS 😂😂😂</a><a class="page-link" href="/CS_Swag/search/">search</a><a class="page-link" href="/CS_Swag/categories/">tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Loops, Dictionaries, and Lists</h1><p class="page-description">Testing out different loops in combination with lists and dictionaries</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-05T00:00:00-05:00" itemprop="datePublished">
+        Sep 5, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CS_Swag/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/CS_Swag/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/aidenhuynh/CS_Swag/tree/master/_notebooks/2022-09-05-dictionaries-test.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CS_Swag/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/aidenhuynh/CS_Swag/master?filepath=_notebooks%2F2022-09-05-dictionaries-test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CS_Swag/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/aidenhuynh/CS_Swag/blob/master/_notebooks/2022-09-05-dictionaries-test.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CS_Swag/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Faidenhuynh%2FCS_Swag%2Fblob%2Fmaster%2F_notebooks%2F2022-09-05-dictionaries-test.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CS_Swag/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#For-Loop-Test">For Loop Test </a></li>
+<li class="toc-entry toc-h2"><a href="#While-Loop-Test">While Loop Test </a></li>
+<li class="toc-entry toc-h2"><a href="#Recursive-Loop-Test">Recursive Loop Test </a></li>
+<li class="toc-entry toc-h2"><a href="#Reversed-List">Reversed List </a></li>
+<li class="toc-entry toc-h2"><a href="#Randomized-List">Randomized List </a></li>
+<li class="toc-entry toc-h2"><a href="#Random-Grocery-List-Generator">Random Grocery List Generator </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Uses-lists-and-a-loop-to-generate-a-specified-number-of-fruits-and-their-respective-prices,-along-with-the-sum-of-all-of-the-prices.">Uses lists and a loop to generate a specified number of fruits and their respective prices, along with the sum of all of the prices. </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-05-dictionaries-test.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="For-Loop-Test">
+<a class="anchor" href="#For-Loop-Test" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop Test<a class="anchor-link" href="#For-Loop-Test"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Data structure with keys and values</span>
+
+<span class="c1"># Append to list a Dictionary of key/values related to a person and their hobbies</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aiden"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"May 12"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"ah5993909@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Video Editing"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append a 2nd dictionary</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Avinh"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 27"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"avinhahuynh@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Streaming"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Prints all of the dictionary values</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span> <span class="c1"># comma adds space between two values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t adds an indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Hobbies: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Hobbies"</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># Loop algorithm</span>
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">mylist</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        
+<span class="n">for_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>For loop output
+
+Aiden Huynh
+	 Residence: Escondido
+	 Birth Day: May 12
+	 Hobbies: Gaming, Video Editing
+
+Avinh Huynh
+	 Residence: Escondido
+	 Birth Day: December 27
+	 Hobbies: Gaming, Streaming
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="While-Loop-Test">
+<a class="anchor" href="#While-Loop-Test" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loop Test<a class="anchor-link" href="#While-Loop-Test"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Data structure with keys and values</span>
+
+<span class="c1"># Append to list a Dictionary of key/values related to a person and their hobbies</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aiden"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"May 12"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"ah5993909@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Video Editing"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append a 2nd dictionary</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Avinh"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 27"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"avinhahuynh@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Streaming"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Prints all of the dictionary values</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span> <span class="c1"># comma adds space between two values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t adds an indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Hobbies: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Hobbies"</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+<span class="c1"># While Loop -&gt; While a specified condition is met (i &lt; len(mylist)), it will loop</span>
+<span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"While loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span>
+
+<span class="n">while_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>While loop output
+
+Aiden Huynh
+	 Residence: Escondido
+	 Birth Day: May 12
+	 Hobbies: Gaming, Video Editing
+
+Avinh Huynh
+	 Residence: Escondido
+	 Birth Day: December 27
+	 Hobbies: Gaming, Streaming
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Recursive-Loop-Test">
+<a class="anchor" href="#Recursive-Loop-Test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive Loop Test<a class="anchor-link" href="#Recursive-Loop-Test"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Data structure with keys and values</span>
+
+<span class="c1"># Append to list a Dictionary of key/values related to a person and their hobbies</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Aiden"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"May 12"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"ah5993909@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Video Editing"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append a 2nd dictionary</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Avinh"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Huynh"</span><span class="p">,</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"December 27"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"Escondido"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"avinhahuynh@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Hobbies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Gaming"</span><span class="p">,</span> <span class="s2">"Streaming"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Prints all of the dictionary values</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span> <span class="c1"># comma adds space between two values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t adds an indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Hobbies: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Hobbies"</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+<span class="c1"># Recursive Loop -&gt; keeps incrementing on each call (n+1) until exit condition is met</span>
+<span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Recursive loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Recursive loop output
+
+Aiden Huynh
+	 Residence: Escondido
+	 Birth Day: May 12
+	 Hobbies: Gaming, Video Editing
+
+Avinh Huynh
+	 Residence: Escondido
+	 Birth Day: December 27
+	 Hobbies: Gaming, Streaming
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reversed-List">
+<a class="anchor" href="#Reversed-List" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reversed List<a class="anchor-link" href="#Reversed-List"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">GList</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"Apple"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Orange"</span><span class="p">,</span> <span class="s2">"1.45"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Banana"</span><span class="p">,</span> <span class="s2">"0.62"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Strawberry"</span><span class="p">,</span> <span class="s2">"0.11"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Blueberry"</span><span class="p">,</span> <span class="s2">"0.02"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Pineapple"</span><span class="p">,</span> <span class="s2">"2.18"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Watermelon"</span><span class="p">,</span> <span class="s2">"4.98"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Kiwi"</span><span class="p">,</span> <span class="s2">"1.07"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Mango"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Grape"</span><span class="p">,</span> <span class="s2">"0.03"</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Reverses the list</span>
+<span class="n">GList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">GList</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[['Grape', '0.03'], ['Mango', '1.32'], ['Kiwi', '1.07'], ['Watermelon', '4.98'], ['Pineapple', '2.18'], ['Blueberry', '0.02'], ['Strawberry', '0.11'], ['Banana', '0.62'], ['Orange', '1.45'], ['Apple', '1.32']]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Randomized-List">
+<a class="anchor" href="#Randomized-List" aria-hidden="true"><span class="octicon octicon-link"></span></a>Randomized List<a class="anchor-link" href="#Randomized-List"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="c1"># Imports various commands for randomization</span>
+
+<span class="c1"># List of fruits and their prices</span>
+<span class="n">GList</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"Apple"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Orange"</span><span class="p">,</span> <span class="s2">"1.45"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Banana"</span><span class="p">,</span> <span class="s2">"0.62"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Strawberry"</span><span class="p">,</span> <span class="s2">"0.11"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Blueberry"</span><span class="p">,</span> <span class="s2">"0.02"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Pineapple"</span><span class="p">,</span> <span class="s2">"2.18"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Watermelon"</span><span class="p">,</span> <span class="s2">"4.98"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Kiwi"</span><span class="p">,</span> <span class="s2">"1.07"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Mango"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Grape"</span><span class="p">,</span> <span class="s2">"0.03"</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Randomizes (shuffles) the list</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">GList</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">GList</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[['Strawberry', '0.11'], ['Mango', '1.32'], ['Orange', '1.45'], ['Watermelon', '4.98'], ['Grape', '0.03'], ['Banana', '0.62'], ['Blueberry', '0.02'], ['Kiwi', '1.07'], ['Pineapple', '2.18'], ['Apple', '1.32']]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-Grocery-List-Generator">
+<a class="anchor" href="#Random-Grocery-List-Generator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random Grocery List Generator<a class="anchor-link" href="#Random-Grocery-List-Generator"> </a>
+</h2>
+<h3 id="Uses-lists-and-a-loop-to-generate-a-specified-number-of-fruits-and-their-respective-prices,-along-with-the-sum-of-all-of-the-prices.">
+<a class="anchor" href="#Uses-lists-and-a-loop-to-generate-a-specified-number-of-fruits-and-their-respective-prices,-along-with-the-sum-of-all-of-the-prices." aria-hidden="true"><span class="octicon octicon-link"></span></a>Uses lists and a loop to generate a specified number of fruits and their respective prices, along with the sum of all of the prices.<a class="anchor-link" href="#Uses-lists-and-a-loop-to-generate-a-specified-number-of-fruits-and-their-respective-prices,-along-with-the-sum-of-all-of-the-prices."> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># List of fruits and their prices</span>
+<span class="n">GList</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"Apple"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Orange"</span><span class="p">,</span> <span class="s2">"1.45"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Banana"</span><span class="p">,</span> <span class="s2">"0.62"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Strawberry"</span><span class="p">,</span> <span class="s2">"0.11"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Blueberry"</span><span class="p">,</span> <span class="s2">"0.02"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Pineapple"</span><span class="p">,</span> <span class="s2">"2.18"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Watermelon"</span><span class="p">,</span> <span class="s2">"4.98"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Kiwi"</span><span class="p">,</span> <span class="s2">"1.07"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Mango"</span><span class="p">,</span> <span class="s2">"1.32"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"Grape"</span><span class="p">,</span> <span class="s2">"0.03"</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Input the desired number of fruits (esc to cancel):"</span><span class="p">)</span>
+<span class="n">fruitCount</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1"># Prompts user on the desired amount of fruits</span>
+
+<span class="c1"># k defines the number of fruits to pull, and by setting that equal to the input(), we pull only the amount desired by the user</span>
+<span class="n">selectedPairs</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">GList</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">fruitCount</span><span class="p">))</span>
+<span class="c1"># int() is used because k must be an integer, did not do this in line 18 because input() must be a string to be printed</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You selected "</span><span class="o">+</span><span class="n">fruitCount</span><span class="o">+</span><span class="s2">" fruits:"</span><span class="p">)</span>
+
+<span class="c1"># This section defines the first term as the fruit and second as the corresponding price, allowing us to use each part separately</span>
+<span class="k">for</span> <span class="n">pricePair</span> <span class="ow">in</span> <span class="n">selectedPairs</span><span class="p">:</span>
+    
+    <span class="n">fruit</span> <span class="o">=</span> <span class="n">pricePair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">pricePair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="o">+</span><span class="s2">": $"</span><span class="o">+</span><span class="n">price</span><span class="p">)</span>
+    
+    <span class="c1"># Calculates the sum of the prices</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span><span class="o">+</span><span class="n">n</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Your total is: $"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Input the desired number of fruits (esc to cancel):
+You selected 10 fruits:
+Strawberry: $0.11
+Apple: $1.32
+Strawberry: $0.11
+Blueberry: $0.02
+Grape: $0.03
+Apple: $1.32
+Pineapple: $2.18
+Strawberry: $0.11
+Mango: $1.32
+Banana: $0.62
+Your total is: $7.14
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="aidenhuynh/CS_Swag"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/CS_Swag/jupyter/markdown/2022/09/05/dictionaries-test.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CS_Swag/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CS_Swag/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CS_Swag/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>flashfweqofj[spkjsa;lkfe;fdnoeqrghf;sgisglknv;grt3]</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/CS_Swag/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/CS_Swag/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
