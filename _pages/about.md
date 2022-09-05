@@ -1,11 +1,13 @@
 ---
 layout: page
-title: About Me
+title: 😂😂😂 WHO DID THIS 😂😂😂
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+I am <b style="color:green">Aiden Huynh</b> (pronounced "win"), creator of this website.
+<br>
+Yep.
+<br>
+<i>I did this.</i>
+<br>
+<img src="https://c.tenor.com/nNcJkkDf6tgAAAAM/laughing-giggle.gif">
