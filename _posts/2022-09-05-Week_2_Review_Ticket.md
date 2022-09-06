@@ -64,7 +64,7 @@ title: Week 2 - Data Abstraction & HTML Fragments
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><a href="aidenhuynh.github.io/CS_Swag/markdown/2022/09/05/Week_2_Review_Ticket.html">Week 2 - Review Ticket</a></td>
+                            <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/05/Week_2_Review_Ticket.html">Week 2 - Review Ticket</a></td>
                             <td>Dictionaries, Lists, Loops, and HTML Fragments</td>
                         </tr>
                         <tr>
@@ -82,6 +82,11 @@ title: Week 2 - Data Abstraction & HTML Fragments
     <details closed>
         <summary>Remote theme change</summary>
         <img src="https://i.ibb.co/ZXJCtVc/image-2022-09-05-173210428.png">
+        <b>Before:</b>
         <img src="">
+        <br>
+        <b>After:</b>
+        <img src="https://i.ibb.co/ngSNsWc/image-2022-09-05-174239115.png">
+        <body>I actually really like these changes and have probably changed the theme to something else after posting this because it makes the blog actually readable</body>
 </li>
 </ul>
