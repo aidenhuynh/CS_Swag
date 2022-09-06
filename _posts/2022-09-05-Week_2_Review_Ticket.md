@@ -24,57 +24,61 @@ title: Week 2 - Data Abstraction & HTML Fragments
         <summary>"Actually Important Table" Time Box on <a href="https://aidenhuynh.github.io/CS_Swag/about/">Home Page (Click for code)</a></summary>
             <h2>Code for table</h2>
             <i style="color=dimgray">I used html because I've already made a <a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/02/iamdash.html">table with Markdown</a></i>
-                <code>
-                <html>
-                    <head>
-                        <style>
-                            table {
-                                font-family: arial, sans-serif;
-                                border-collapse: collapse;
-                                width: 100%;
-                            }
-                            td, th {
-                                border: 1px solid #dddddd;
-                                text-align: left;
-                                padding: 8px;
-                            }
-                            tr:nth-child(even) {
-                                background-color: #dddddd;
-                            }
-                            tr:nth-child(odd) {
-                                background-color: #ffffff;
-                            }
-                        </style>
-                    </head>
-                    <table>
-                        <tr>
-                            <th>Week</th>
-                            <th>Review Ticket</th>
-                            <th>Points</th>
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/03/Week_0_Hacks.html">Week 0 - Review Ticket</a></td>
-                            <td>Tools and Setup</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/04/Week_1_Hacks.html">Week 1 - Review Ticket</a></td>
-                            <td>Intro to Python, Bash, and Fastpages Frontend Development</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/05/Week_2_Review_Ticket.html">Week 2 - Review Ticket</a></td>
-                            <td>Dictionaries, Lists, Loops, and HTML Fragments</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>incomplete</td>
-                            <td>AppLab Planning/Blogging, AppLab Creation, Plan for end of Tri project</td>
-                        </tr>
-                    </table>
-                </html>
-                </code>
+                <blockquote>
+                    <pre>
+                        <code>
+                            <html>
+                                <head>
+                                    <style>
+                                        table {
+                                            font-family: arial, sans-serif;
+                                            border-collapse: collapse;
+                                            width: 100%;
+                                        }
+                                        td, th {
+                                            border: 1px solid #dddddd;
+                                            text-align: left;
+                                            padding: 8px;
+                                        }
+                                        tr:nth-child(even) {
+                                            background-color: #dddddd;
+                                        }
+                                        tr:nth-child(odd) {
+                                            background-color: #ffffff;
+                                        }
+                                    </style>
+                                </head>
+                                <table>
+                                    <tr>
+                                        <th>Week</th>
+                                        <th>Review Ticket</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/03/Week_0_Hacks.html">Week 0 - Review Ticket</a></td>
+                                        <td>Tools and Setup</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/04/Week_1_Hacks.html">Week 1 - Review Ticket</a></td>
+                                        <td>Intro to Python, Bash, and Fastpages Frontend Development</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/05/Week_2_Review_Ticket.html">Week 2 - Review Ticket</a></td>
+                                        <td>Dictionaries, Lists, Loops, and HTML Fragments</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>incomplete</td>
+                                        <td>AppLab Planning/Blogging, AppLab Creation, Plan for end of Tri project</td>
+                                    </tr>
+                                </table>
+                            </html>
+                        </code>
+                    </pre>
+                </blockquote>
     </details>
 </li>
 
@@ -83,10 +87,12 @@ title: Week 2 - Data Abstraction & HTML Fragments
         <summary>Remote theme change</summary>
         <img src="https://i.ibb.co/ZXJCtVc/image-2022-09-05-173210428.png">
         <b>Before:</b>
-        <img src="">
+        <img src="https://i.ibb.co/5RRtWkC/image-2022-09-05-180235001.png">
+        <body>Very unreadable because I think that's kind of funny.</body>
         <br>
         <b>After:</b>
         <img src="https://i.ibb.co/ngSNsWc/image-2022-09-05-174239115.png">
         <body>I actually really like these changes and will probably keep them as they make my blog actually readable.</body>
+    </details>
 </li>
 </ul>
