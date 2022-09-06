@@ -87,6 +87,6 @@ title: Week 2 - Data Abstraction & HTML Fragments
         <br>
         <b>After:</b>
         <img src="https://i.ibb.co/ngSNsWc/image-2022-09-05-174239115.png">
-        <body>I actually really like these changes and have probably changed the theme to something else after posting this because it makes the blog actually readable</body>
+        <body>I actually really like these changes and will probably keep them as they make my blog actually readable.</body>
 </li>
 </ul>
