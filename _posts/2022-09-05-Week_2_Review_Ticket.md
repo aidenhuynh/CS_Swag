@@ -21,7 +21,7 @@ title: Week 2 - Data Abstraction & HTML Fragments
 </li>
 <li>
     <details closed>
-        <summary>"Actually Important Table" on <a href="https://aidenhuynh.github.io/CS_Swag/about/">Home Page (Click for code)</a></summary>
+        <summary>"Actually Important Table" Time Box on <a href="https://aidenhuynh.github.io/CS_Swag/about/">Home Page (Click for code)</a></summary>
             <h2>Code for table</h2>
             <i style="color=dimgray">I used html because I've already made a <a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/02/iamdash.html">table with Markdown</a></i>
                 <code>
@@ -76,5 +76,12 @@ title: Week 2 - Data Abstraction & HTML Fragments
                 </html>
                 </code>
     </details>
+</li>
+
+<li>
+    <details closed>
+        <summary>Remote theme change</summary>
+        <img src="https://i.ibb.co/ZXJCtVc/image-2022-09-05-173210428.png">
+        <img src="">
 </li>
 </ul>
