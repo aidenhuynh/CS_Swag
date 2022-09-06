@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: submissions for week 2
+description: hacks for week 2
 categories: [markdown]
 title: Week 2 - Data Abstraction & HTML Fragments
 ---
