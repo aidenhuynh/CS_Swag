@@ -106,19 +106,7 @@ image: images/logo.png
 
   <h2>Super awesome posts (because I made them)</h2>
 
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-  
-  {{ content | markdownify }}
-  
-  
-  {% if site.paginate %}
-  {% assign rawposts = paginator.posts %}
-  {% else %}
-  {% assign rawposts = site.posts %}
-  {% endif %}
-  
+
   <!-- Hide posts if front matter flag hide:true -->
   {% assign posts = ''|split:'' %}
   {% for post in rawposts %}
