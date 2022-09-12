@@ -179,5 +179,5 @@ Code();
         </details>
     </li>
     <li><a href="https://aidenhuynh.github.io/CS_Swag/jupyter/markdown/2022/09/10/Create_Task_Planning.html">Create Task Planning</a></li>
-    <li><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/10/Week_3_Review_Ticket.html">Sprint backlog</a></li>
+    <li><a href="https://aidenhuynh.github.io/CS_Swag/markdown/2022/09/12/Sprint_Backlog.html">Sprint backlog</a></li>
 </ul>
