@@ -116,6 +116,7 @@ window.onload = wrap_img;
   var ans3 = "nothing";
   var ans4 = "nothing";
   var socialCredit = 0;
+  var ans = 0;
   setText("textScore", "Score: 0");
   function Correctans() {
     Hidebuttons();
@@ -165,15 +166,27 @@ window.onload = wrap_img;
     });
   }
   function Randomans() {
-    x = randomNumber(0, 3);
-    if (x === 0) {
+    ans = randomNumber(0, 3);
+    if (ans === 0) {
       ans1 = "correct";
-    } else if (x === 1) {
+      ans2 = "incorrect";
+      ans3 = "incorrect";
+      ans4 = "incorrect";
+    } else if (ans === 1) {
       ans2 = "correct";
-    } else if (x === 2) {
+      ans1 = "incorrect";
+      ans3 = "incorrect";
+      ans4 = "incorrect";
+    } else if (ans === 2) {
       ans3 = "correct";
+      ans1 = "incorrect";
+      ans2 = "incorrect";
+      ans4 = "incorrect";
     } else {
       ans4 = "correct";
+      ans1 = "incorrect";
+      ans2 = "incorrect";
+      ans3 = "incorrect";
     }
   }
   function Showbuttons() {
@@ -212,7 +225,7 @@ window.onload = wrap_img;
       setText("buttonTR", "Tails");
       setText("buttonBL", "Both");
       setText("buttonBR", "Neither");
-      x = randomNumber(0, 1);
+      var x = randomNumber(0, 1);
       if (x === 0) {
         ans1 = "correct";
       } else if (x === 1) {
