@@ -9,6 +9,9 @@ title: Sprint Backlog
 ## Current Sprint: Python Web Server Project
 * Form official Scrum teams
 
+## Super Scrummers
+* I have actually no idea what we're doing
+
 ## Other:
 * Create task planning
 * Figure out collaboration
