@@ -7,7 +7,8 @@ title: Sprint Backlog
 ---
 # Sprint Backlog: 
 ## Current Sprint: Python Web Server Project
-* Form official Scrum teams
+* Make video
+* Show local hosted servers
 
 ## Super Scrummers
 * I have actually no idea what we're doing
