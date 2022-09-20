@@ -26,10 +26,12 @@ title: Week 4 Review Ticket - Python Web Server Project
     <li>
         <details closed>
             <summary>Collaboration</summary>
+            <ul style="margin-left:30px">
             <li>My group is completely random as I hadn't known any of them aside from Dash</li>
             <li>Not entirely sure about common interests</li>
             <li>There is some variance in gender and a lot in culture.</li>
             <li>Unsure of skill sets, but they are all interested in Computer Science</li>
+            </ul>
         </details>
     </li>
 </ul>
