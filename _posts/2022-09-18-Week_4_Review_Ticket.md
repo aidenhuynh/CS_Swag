@@ -9,10 +9,10 @@ title: Week 4 Review Ticket - Python Web Server Project
     <li>
         <details closed>
             <summary>Psychology and the Good Life</summary>
-            <li>Goals: (ACTUALLY DO THESE, EFFORT -> HAPPINESS)</li>
+            <b>Goals: (ACTUALLY DO THESE, EFFORT -> HAPPINESS)</b>
                 <li>Create something fun outside of class (SUPERSCRUMMERS)</li>
-                    <li>Fun game for groups to play</li>
-                    <li> More team building with the team</li>
+                <li>Fun game for groups to play</li>
+                <li> More team building with the team</li>
                 <li>Make a substantial impact on the Robotics club</li>
                 <li>Offer help to classmates (particularly in psych)</li>
                 <li>8-10hrs of sleep</li>
