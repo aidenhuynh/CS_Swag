@@ -144,7 +144,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
+<p>
+</p>
     <style>
         table.submenu, th.submenu, td.submenu, tr.submenu {
             margin:auto;
@@ -158,6 +159,7 @@ window.onload = wrap_img;
         }
     </style>
 
+<br>
 <table class="submenu">
     <tr class="submenu">
         <th class="submenu"><a href="https://www.youtube.com/watch?v=V3_QjoWOKS4"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/118/flushed-face_1f633.png" height="50" width="50"></a></th>
@@ -169,6 +171,10 @@ window.onload = wrap_img;
         <th class="submenu"><a href="/CS_Swag/jupyter/markdown/2022/09/21/Java_Test.html#Table-with-Java">Java Table</a></th>
     </tr>
 </table>
+<br>
+<br>
+<br>
+
 <h3 id="console.log-output">
 <a class="anchor" href="#console.log-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>console.log output<a class="anchor-link" href="#console.log-output"> </a>
 </h3>
@@ -325,17 +331,20 @@ This is a object: [ 1, 2, 3 ]
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">coinFlip</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">flip</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span>
-    <span class="c1">// it's slightly rigged towards heads</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">flip</span> <span class="o">&lt;=</span> <span class="s2">"0.5"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">flip</span> <span class="o">&lt;</span> <span class="s2">"0.5"</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"It's Heads!"</span><span class="p">)</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">flip</span> <span class="o">&gt;</span> <span class="s2">"0.5"</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"It's Tails!"</span><span class="p">)</span>
         <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"It landed on it's side!"</span><span class="p">)</span>
+            <span class="c1">// This is a 0.00000000000001% chance</span>
+        <span class="p">}</span>
 <span class="p">}</span>
-<span class="c1">// Change this number for # of coins to flip</span>
-<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">10</span>
-<span class="k">while</span> <span class="p">(</span><span class="nx">i</span><span class="o">&gt;</span><span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">i</span><span class="o">=</span><span class="p">(</span><span class="nx">i</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">coinCount</span> <span class="o">=</span> <span class="mf">10</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">coinCount</span><span class="o">&gt;</span><span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">coinCount</span><span class="o">=</span><span class="p">(</span><span class="nx">coinCount</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
     <span class="nx">coinFlip</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
@@ -351,15 +360,15 @@ This is a object: [ 1, 2, 3 ]
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>It's Heads!
-It's Heads!
-It's Heads!
-It's Heads!
+It's Tails!
+It's Tails!
 It's Tails!
 It's Heads!
 It's Heads!
 It's Tails!
+It's Tails!
 It's Heads!
-It's Heads!
+It's Tails!
 </pre>
 </div>
 </div>
