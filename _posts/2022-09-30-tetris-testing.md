@@ -878,6 +878,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Day-2-(10/20/22)">Day 2 (10/20/22)<a class="anchor-link" href="#Day-2-(10/20/22)"> </a></h3><p>After looking online at some examples of TETRIS with js, I have noticed that I would need to write a minimum of like 1,500 lines of code so I have given up on this and am now moving to do Who's That Pokemon.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
