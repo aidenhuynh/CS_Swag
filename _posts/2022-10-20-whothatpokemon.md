@@ -25,14 +25,16 @@ title: Who's That Pokémon?
         }
         .myTable {
             width: 100%;
-            background-size: contain;
-            background-color: red;
-            color: white;
             table-layout: fixed;
         }
         tr.pokeBox {
             background-image:url('https://i.ibb.co/rQFzcnD/d83htw0-ec490c3b-f7dd-4570-a698-8404a8a12f99.png');
             background-size: cover;
+            color:white;
+        }
+        tr.myRow {
+            background-color: red;
+            color:rgb(0, 154, 0);
         }
         .myIMG {
             height: 30%;
@@ -58,7 +60,7 @@ title: Who's That Pokémon?
                 </td>
             </tr>
             <tr><td colspan=3 id="inputRow"></td></tr>
-            <tr><td colspan=3 id="message"></td></tr>
+            <tr class="myRow"><td colspan=3 id="message"></td></tr>
             <tr id="rowButtons">
                 <td colspan=3><button class="myButton" onclick="gameStart()">CLICK TO START</button></td>
             </tr>
@@ -180,18 +182,20 @@ title: Who's That Pokémon?
         var pokeGuess = document.getElementById("inputBox").value
         var input = pokeGuess.toLowerCase()
 
-        if (input == pokeFilteredName) {
-            score += 1
-            document.getElementById('message').innerHTML = pokeGuess + " is correct!"
-        }
-        else {
-            score -= 1
-            document.getElementById('message').innerHTML = pokeGuess + " is incorrect!"
-        }
-        document.getElementById('displayedScore').innerHTML = score
-        document.getElementById('displayedName').innerHTML = pokeFilteredName.charAt(0).toUpperCase() + pokeFilteredName.slice(1)
+        while (pokeChecked == false) {
+            if (input == pokeFilteredName) {
+                score += 1
+                document.getElementById('message').innerHTML = pokeGuess + " is correct!"
+            }
+            else {
+                score -= 1
+                document.getElementById('message').innerHTML = pokeGuess + " is incorrect!"
+            }
+            document.getElementById('displayedScore').innerHTML = score
+            document.getElementById('displayedName').innerHTML = pokeFilteredName.charAt(0).toUpperCase() + pokeFilteredName.slice(1)
 
-        pokeChecked = true
+            pokeChecked = true
+        }
     }
 
     function nextPokemon() {
@@ -209,5 +213,7 @@ title: Who's That Pokémon?
     // Still to do:
     // Gen select
     // make more user friendly: combine next and submit, allow "enter" key as input
+    // fix colors of table
+    // remove duplicates?
 </script>
 </html>
