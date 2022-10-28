@@ -49,6 +49,9 @@ title: Who's That Pokémon?
             display: block;
             margin: 0 auto;
         }
+        .yello {
+            color:yellow
+        }
         </style>
     </head>
     <div class="myDiv">
@@ -56,14 +59,15 @@ title: Who's That Pokémon?
         <br>
         <h3 style="color:rgb(0, 149, 255)">HOW TO PLAY</h3>
             <ol type="1"> 
-                <h3 style="color:rgb(255, 255, 0)">
-                    <li>Press start</li>
-                    <li>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
-                    <li>Submit Pokémon name</li>
-                    <li>Press Next</li>
-                    <li>Repeat until all Pokémon are correct or until 3 incorrect answers</li>
-                </h3> 
-                <!-- It's a heading because for some reason the theme overrides all non heading text? -->
+                    <li><h3 class="yello">Press start</h3></li>
+                    <li><h3 class="yello">Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</h3></li>
+                    <li><h3 class="yello">Submit Pokémon name</h3></li>
+                    <li><h3 class="yello">Press Next</h3></li>
+                    <li><h3 class="yello">Repeat until all Pokémon are correct or until 3 incorrect answers</h3></li>
+                <!-- 
+                They're headings because for some reason the theme overrides all non heading text? 
+                Yeah idk what to do abt that lol
+                -->
             </ol>
         <br>
         <table class="myTable" id="table">
