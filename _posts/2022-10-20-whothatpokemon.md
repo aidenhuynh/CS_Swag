@@ -29,7 +29,7 @@ title: Who's That Pokémon?
         }
         .myTable {
             margin:auto;
-            width: 70%;
+            width: 90%;
             table-layout: fixed;
             color:rgb(0, 154, 0);
             background-color:rgb(72, 71, 71);
