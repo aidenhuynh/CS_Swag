@@ -5,46 +5,49 @@ description: Funny game funny game
 categories: [markdown]
 title: Who's That Pokémon?
 ---
-<html>
+<html lang="en">
     <head>
         <style>
         .myDiv {
             border: 0px solid rgb(0, 0, 0);
             padding: 30px;
             background-color: #4d4d4dbe;    
-            width: 100%;
+            width: 60%;
             margin: auto;
             border-radius: 25px;
+            height:100%;
+            font-family:'Courier New', Courier, monospace
         }
-        .myButton {
-            height: 300%;
+        button.myButton {
+            height: 100%;
             width: 100%;
             background-color:rgb(72, 71, 71);
             color:rgb(0, 154, 0); 
-            border: 1px solid rgb(125, 0, 0)
+            border: 3px solid rgb(255, 0, 0);
+            margin: auto;
+            line-height: 300%;
         }
         .myTable {
-            width: 100%;
+            margin:auto;
+            width: 70%;
             table-layout: fixed;
-            border: 0;
+            color:rgb(0, 154, 0);
+            background-color:rgb(72, 71, 71);
+            outline: 10px solid red;
         }
         tr.pokeBox {
             background-image:url('https://i.ibb.co/rQFzcnD/d83htw0-ec490c3b-f7dd-4570-a698-8404a8a12f99.png');
             background-size: cover;
             color:white;
         }
-        tr.myRow {
-            color:rgb(0, 154, 0);
-            background-color:red
-        }
-        td.myData {
-            color:rgb(0, 154, 0);
-            background-color:red
+        .buttonRowStyle {
+            line-height: 500%;
         }
         .myIMG {
             height: 30%;
             width: 30%;
-            margin: auto;
+            display: block;
+            margin: 0 auto;
         }
         </style>
     </head>
@@ -65,16 +68,27 @@ title: Who's That Pokémon?
         <table class="myTable" id="table">
             <tr class="pokeBox">
                 <td colspan=8>
+                    <br>
+                    <br>
+                    <br>
                     <span id="imageBox"><img class="myIMG" src="https://www.freepnglogos.com/uploads/pokeball-png/pokeball-alexa-style-blog-pokemon-inspired-charmander-daily-8.png"></span>
                     <br>
-                    <span id="gameInfo"></span>
+                    <br>
+                    <br>
+                    <span id="gameInfo"><br><br><br></span>
                 </td>
             </tr>
-            <tr><td class="myData" colspan=8 id="inputRow"></td></tr>
-            <tr class="myRow"><td colspan=8 id="message"></td></tr>
-            <tr id="rowButtons">
-                <td class="myData" colspan=8><button class="myButton" onclick="gameStart()">CLICK TO START</button></td>
+            <tr>
+                <td colspan=8 id="inputRow"><br></td>
             </tr>
+            <tr>
+                <td colspan=8 id="message"><br></td>
+            </tr>
+            <span class="buttonRowStyle">
+                <tr id="rowButtons">  
+                    <td colspan=8><button class="myButton" onclick="gameStart()">CLICK TO START</button></td>
+                </tr>
+            </span>
         </table>
     </div>
 <script>
@@ -141,7 +155,7 @@ title: Who's That Pokémon?
         }
     ]
 
-    const pokeFilter = [
+    const pokeUnfiltered = [
         "nidoran-f",
         "nidoran-m",
         "deoxsys-normal",
@@ -172,6 +186,7 @@ title: Who's That Pokémon?
         "morpeko-full-belly",
         "urshifu-single-strike",
         "mr-mime",
+        "farfetchd"
     ]
     
     const pokeFiltered = [
@@ -205,6 +220,7 @@ title: Who's That Pokémon?
         "morpeko",
         "urshifu",
         "mr. mime",
+        "farfetch'd"
     ]
 
     function gameStart() {
@@ -229,15 +245,38 @@ title: Who's That Pokémon?
         }
     }
 
+    function enterEvent() {
+        if (incorrect != 3) {
+            if (pokeChecked == true) {
+                nextPokemon()
+            }
+            else {
+                pokeCheck()
+            }
+        }
+        else {
+            location.reload()
+        }
+    }
+
     function genSelected() {
         document.getElementById('rowButtons').innerHTML = ' \
-        <td colspan=4><button type="button" class="myButton" onclick="pokeCheck()">Submit</button></td> \
-        <td colspan=4><button type="button" class="myButton" onclick="nextPokemon()">Next</button></td> \
+        <td colspan=4><button type="button" class="myButton" onclick="location.reload()">Restart</button></td> \
+        <td colspan=4><button type="button" class="myButton" onclick="enterEvent()" id="continueButton">Submit</button></td> \
         '
 
         document.getElementById('inputRow').innerHTML = '<input type="text" id="inputBox" style="width:100%">'
 
-        document.getElementById('message').innerHTML = ""
+        var inputBox = document.getElementById('inputBox')
+
+        inputBox.addEventListener("keypress", function() {
+            if (event.key === "Enter") {
+                event.preventDefault
+                enterEvent()
+            }
+        })
+
+        document.getElementById('message').innerHTML = "<br>"
 
         document.getElementById('gameInfo').innerHTML = '\
         <body> \
@@ -272,8 +311,8 @@ title: Who's That Pokémon?
         document.getElementById('imageBox').innerHTML = '<img class="myIMG" src="' + pokeIMG + '">'
         document.getElementById('displayedName').innerHTML = '???'
 
-        if (pokeFilter.includes(pokeName) == true) {
-            pokeFilteredName = pokeFiltered[pokeFilter.indexOf(pokeName)]
+        if (pokeUnfiltered.includes(pokeName) == true) {
+            pokeFilteredName = pokeFiltered[pokeUnfiltered.indexOf(pokeName)]
         }
         else {
             pokeFilteredName = pokeName
@@ -285,44 +324,58 @@ title: Who's That Pokémon?
         var pokeGuess = document.getElementById("inputBox").value
         var input = pokeGuess.toLowerCase()
 
-        while (pokeChecked == false) {
-            if (input == pokeFilteredName) {
-                correct += 1
-                document.getElementById('message').innerHTML = pokeGuess + " is correct!"
-                usedIds.push(randId)
-            }
-            else {
-                if (incorrect < (strikes - 1)) {
-                    incorrect += 1
-                    document.getElementById('message').innerHTML = pokeGuess + " is incorrect!"
+        if (pokeGuess == "") {
+            document.getElementById('message').innerHTML = "Please guess something in the box above and press submit or enter"
+        }
+        else {
+            while (pokeChecked == false) {
+                if (input == pokeFilteredName) {
+                    if (correct < (pokeMax - pokeMin)) {
+                    correct += 1
+                    document.getElementById('message').innerHTML = pokeGuess + " is correct!"
+                    usedIds.push(randId)
+                    document.getElementById('continueButton').innerHTML = "Next"
                 }
-                else {
-                    incorrect += 1
-                    document.getElementById('message').innerHTML = pokeGuess + " is incorrect! You lose!"
+                    else {
+                    correct += 1
+                    document.getElementById('message').innerHTML = pokeGuess + " is correct! You win!"
                     document.getElementById('rowButtons').innerHTML = ' \
                     <td colspan=8><button type="button" class="myButton" onclick="location.reload()">Restart</button></td> \
-                    '
+                    '                }
                 }
-                            
-            }
-            document.getElementById('displayedCorrect').innerHTML = correct + "/" + (pokeMax - pokeMin + 1)
-            document.getElementById('displayedIncorrect').innerHTML = incorrect + "/" + strikes
-            document.getElementById('displayedName').innerHTML = pokeFilteredName.charAt(0).toUpperCase() + pokeFilteredName.slice(1)
+                else {
+                    if (incorrect < (strikes - 1)) {
+                        incorrect += 1
+                        document.getElementById('message').innerHTML = pokeGuess + " is incorrect!"
+                        document.getElementById('continueButton').innerHTML = "Next"
+                    }
+                    else {
+                        incorrect += 1
+                        document.getElementById('message').innerHTML = pokeGuess + " is incorrect! You lose!"
+                        document.getElementById('rowButtons').innerHTML = ' \
+                        <td colspan=8><button type="button" class="myButton" onclick="location.reload()">Restart</button></td> \
+                        '
+                    }             
+                }
+                document.getElementById('displayedCorrect').innerHTML = correct + "/" + (pokeMax - pokeMin + 1)
+                document.getElementById('displayedIncorrect').innerHTML = incorrect + "/" + strikes
+                document.getElementById('displayedName').innerHTML = pokeFilteredName.charAt(0).toUpperCase() + pokeFilteredName.slice(1)
 
-            pokeChecked = true
+                pokeChecked = true
+            }
         }
     }
 
     function nextPokemon() {
         if (pokeChecked == true) {
             getPokemon(pokeMin, pokeMax)
-            document.getElementById('message').innerHTML = ""
+            document.getElementById('message').innerHTML = "<br>"
             document.getElementById('inputBox').value = ""
+            document.getElementById('continueButton').innerHTML = "Submit"
             pokeChecked = false
         }
         else (
-            document.getElementById('message').innerHTML = "Please guess something in the box above or press submit"
+            document.getElementById('message').innerHTML = "Please guess something in the box above and press submit or enter"
         )
     }
 </script>
-</html>
