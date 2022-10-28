@@ -99,8 +99,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#whos-that-pok%C3%A9mon">Who&#39;s That Pokémon?</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#how-to-play">HOW TO PLAY</a></li>
-<li class="toc-entry toc-h3"><a href="#--------------------">
-                    </a></li>
+<li class="toc-entry toc-h3"><a href="#press-start">Press start</a></li>
+<li class="toc-entry toc-h3"><a href="#choose-generation-of-pok%C3%A9mon-gen-8-not-yet-fully-supported-by-pok%C3%A9api">Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</a></li>
+<li class="toc-entry toc-h3"><a href="#submit-pok%C3%A9mon-name">Submit Pokémon name</a></li>
+<li class="toc-entry toc-h3"><a href="#press-next">Press Next</a></li>
+<li class="toc-entry toc-h3"><a href="#repeat-until-all-pok%C3%A9mon-are-correct-or-until-3-incorrect-answers">Repeat until all Pokémon are correct or until 3 incorrect answers</a></li>
 </ul>
 </li>
 </ul><body>
@@ -147,6 +150,9 @@ window.onload = wrap_img;
             display: block;
             margin: 0 auto;
         }
+        .yello {
+            color:yellow
+        }
         </style>
     
     <div class="myDiv">
@@ -156,16 +162,20 @@ window.onload = wrap_img;
         <h3 style="color:rgb(0, 149, 255)">
 <a class="anchor" href="#how-to-play" aria-hidden="true"><span class="octicon octicon-link"></span></a>HOW TO PLAY</h3>
             <ol type="1"> 
-                <h3 style="color:rgb(255, 255, 0)">
-<a class="anchor" href="#--------------------" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-                    </h3>
-<li>Press start</li>
-                    <li>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
-                    <li>Submit Pokémon name</li>
-                    <li>Press Next</li>
-                    <li>Repeat until all Pokémon are correct or until 3 incorrect answers</li>
-                 
-                <!-- It's a heading because for some reason the theme overrides all non heading text? -->
+                    <li><h3 class="yello">
+<a class="anchor" href="#press-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Press start</h3></li>
+                    <li><h3 class="yello">
+<a class="anchor" href="#choose-generation-of-pok%C3%A9mon-gen-8-not-yet-fully-supported-by-pok%C3%A9api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</h3></li>
+                    <li><h3 class="yello">
+<a class="anchor" href="#submit-pok%C3%A9mon-name" aria-hidden="true"><span class="octicon octicon-link"></span></a>Submit Pokémon name</h3></li>
+                    <li><h3 class="yello">
+<a class="anchor" href="#press-next" aria-hidden="true"><span class="octicon octicon-link"></span></a>Press Next</h3></li>
+                    <li><h3 class="yello">
+<a class="anchor" href="#repeat-until-all-pok%C3%A9mon-are-correct-or-until-3-incorrect-answers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repeat until all Pokémon are correct or until 3 incorrect answers</h3></li>
+                <!-- 
+                They're headings because for some reason the theme overrides all non heading text? 
+                Yeah idk what to do abt that lol
+                -->
             </ol>
         <br>
         <table class="myTable" id="table">
