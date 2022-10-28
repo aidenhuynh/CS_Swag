@@ -12,7 +12,7 @@ title: Who's That Pokémon?
             border: 0px solid rgb(0, 0, 0);
             padding: 30px;
             background-color: #4d4d4dbe;    
-            width: 60%;
+            width: 100%;
             margin: auto;
             border-radius: 25px;
             height:100%;
@@ -56,13 +56,14 @@ title: Who's That Pokémon?
         <br>
         <h3 style="color:rgb(0, 149, 255)">HOW TO PLAY</h3>
             <ol type="1"> 
-                <span style="color:rgb(255, 255, 0)">
+                <h3 style="color:rgb(255, 255, 0)">
                     <li>Press start</li>
                     <li>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
                     <li>Submit Pokémon name</li>
                     <li>Press Next</li>
                     <li>Repeat until all Pokémon are correct or until 3 incorrect answers</li>
-                </span> 
+                </h3> 
+                <!-- It's a heading because for some reason the theme overrides all non heading text? -->
             </ol>
         <br>
         <table class="myTable" id="table">
