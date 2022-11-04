@@ -1,21 +1,29 @@
 ---
-toc: true
+toc: false
 layout: post
-description: Funny game funny game
+description: Pokémon game
 categories: [markdown]
 title: Who's That Pokémon?
 ---
+# Who's That Pokémon?
+
+{% include submenu.html %}
 <html lang="en">
     <head>
         <style>
+        body.background {
+            background-image: url('https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg');
+            background-size: cover;
+            background-position: center
+        }
         .myDiv {
             border: 0px solid rgb(0, 0, 0);
             padding: 30px;
             background-color: #4d4d4dbe;    
-            width: 100%;
+            width: 60%;
             margin: auto;
             border-radius: 25px;
-            height:100%;
+            height:auto;
             font-family:'Courier New', Courier, monospace
         }
         button.myButton {
@@ -29,7 +37,7 @@ title: Who's That Pokémon?
         }
         .myTable {
             margin:auto;
-            width: 90%;
+            width: 70%;
             table-layout: fixed;
             color:rgb(0, 154, 0);
             background-color:rgb(72, 71, 71);
@@ -49,25 +57,22 @@ title: Who's That Pokémon?
             display: block;
             margin: 0 auto;
         }
-        .yello {
-            color:yellow
-        }
         </style>
     </head>
+    <br>
+    <body class="background">
     <div class="myDiv">
         <h1 style="color:rgb(0, 149, 255); text-align:center">Who's That Pokémon?</h1>
         <br>
         <h3 style="color:rgb(0, 149, 255)">HOW TO PLAY</h3>
             <ol type="1"> 
-                    <li><h3 class="yello">Press start</h3></li>
-                    <li><h3 class="yello">Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</h3></li>
-                    <li><h3 class="yello">Submit Pokémon name</h3></li>
-                    <li><h3 class="yello">Press Next</h3></li>
-                    <li><h3 class="yello">Repeat until all Pokémon are correct or until 3 incorrect answers</h3></li>
-                <!-- 
-                They're headings because for some reason the theme overrides all non heading text? 
-                Yeah idk what to do abt that lol
-                -->
+                <span style="color:rgb(255, 255, 0)">
+                    <li>Press start</li>
+                    <li>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
+                    <li>Submit Pokémon name with the button or Enter</li>
+                    <li>Press Next or Enter</li>
+                    <li>Repeat until all Pokémon are correct or until 3 incorrect answers</li>
+                </span> 
             </ol>
         <br>
         <table class="myTable" id="table">
@@ -95,7 +100,10 @@ title: Who's That Pokémon?
                 </tr>
             </span>
         </table>
+        <br>
     </div>
+    <br>
+    </body>
 <script>
     // Pokemon variables
     var pokeMin = ""
@@ -340,13 +348,14 @@ title: Who's That Pokémon?
                     document.getElementById('message').innerHTML = pokeGuess + " is correct!"
                     usedIds.push(randId)
                     document.getElementById('continueButton').innerHTML = "Next"
-                }
+                    }
                     else {
                     correct += 1
                     document.getElementById('message').innerHTML = pokeGuess + " is correct! You win!"
                     document.getElementById('rowButtons').innerHTML = ' \
                     <td colspan=8><button type="button" class="myButton" onclick="location.reload()">Restart</button></td> \
-                    '                }
+                    '
+                    }
                 }
                 else {
                     if (incorrect < (strikes - 1)) {
@@ -384,3 +393,4 @@ title: Who's That Pokémon?
         )
     }
 </script>
+</html>
