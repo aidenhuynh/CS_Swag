@@ -1,12 +1,10 @@
 ---
 toc: false
 layout: post
-description: Pokémon game
+description: Guess the Pokémon for a chance to win absolutely nothing!
 categories: [markdown]
 title: Who's That Pokémon?
 ---
-# Who's That Pokémon?
-
 {% include submenu.html %}
 <html lang="en">
     <head>
@@ -20,7 +18,7 @@ title: Who's That Pokémon?
             border: 0px solid rgb(0, 0, 0);
             padding: 30px;
             background-color: #4d4d4dbe;    
-            width: 60%;
+            width: 100%;
             margin: auto;
             border-radius: 25px;
             height:auto;
@@ -37,7 +35,7 @@ title: Who's That Pokémon?
         }
         .myTable {
             margin:auto;
-            width: 70%;
+            width: 90%;
             table-layout: fixed;
             color:rgb(0, 154, 0);
             background-color:rgb(72, 71, 71);
@@ -64,15 +62,14 @@ title: Who's That Pokémon?
     <div class="myDiv">
         <h1 style="color:rgb(0, 149, 255); text-align:center">Who's That Pokémon?</h1>
         <br>
-        <h3 style="color:rgb(0, 149, 255)">HOW TO PLAY</h3>
+        <h2 style="color:rgb(0, 149, 255)">HOW TO PLAY</h2>
             <ol type="1"> 
-                <span style="color:rgb(255, 255, 0)">
-                    <li>Press start</li>
-                    <li>Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
-                    <li>Submit Pokémon name with the button or Enter</li>
-                    <li>Press Next or Enter</li>
-                    <li>Repeat until all Pokémon are correct or until 3 incorrect answers</li>
-                </span> 
+                    <li style="color:rgb(255, 255, 0)">Press start</li>
+                    <li style="color:rgb(255, 255, 0)">Choose generation of Pokémon (Gen 8 not yet fully supported by PokéAPI)</li>
+                    <li style="color:rgb(255, 255, 0)">Submit Pokémon name with the button or Enter</li>
+                    <li style="color:rgb(255, 255, 0)">Press Next or Enter</li>
+                    <li style="color:rgb(255, 255, 0)">Repeat until all Pokémon are correct or until 3 incorrect answers</li>
+                    <!-- I tried to use a <span> for this but FastPages didn't like that so this is what we get. -->
             </ol>
         <br>
         <table class="myTable" id="table">
@@ -101,6 +98,7 @@ title: Who's That Pokémon?
             </span>
         </table>
         <br>
+        <h6 style="color:white">A better version of the game (with global stats) can be found <a href="https://swag.nighthawkcodingteams.cf/projects/whosthatpokemon/">here</a></h6>
     </div>
     <br>
     </body>
