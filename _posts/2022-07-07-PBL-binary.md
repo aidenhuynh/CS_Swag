@@ -2,7 +2,7 @@
 title: Binary Math
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
-permalink: /frontend/binary2
+permalink: /frontend/binary
 categories: []
 tags: [html, liquid, javascript]
 ---
@@ -60,7 +60,6 @@ tags: [html, liquid, javascript]
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
     var valueAdd = ""
     var bitsSelected = false
-    var silliness = "none"
 
     document.getElementById("inputAdd").addEventListener("keyup", function() {
         event.preventDefault
@@ -73,54 +72,18 @@ tags: [html, liquid, javascript]
             else if (valueAdd == "" | valueAdd == 0 | isNaN(valueAdd) == true) {
                 document.getElementById('message2').innerHTML = "Please enter a valid number."
             }
-            else if (valueAdd < 0) {
-                if (parseInt(document.getElementById("decimal").innerHTML) + valueAdd < 0) {
-                    bits = ""
-                    i = BITS
-                    while (i >= 0) {
-                        bits += 0
-                        i -= 1
-                    }
-                    console.log("underflow")
-                    silliness = "underflow"
-                    add(0)
-                }
-                else {
-                    add(valueAdd)
-                }
-            }
-            else if (valueAdd > 0) {
-                console.log(parseInt(document.getElementById("decimal").innerHTML) + valueAdd)
-                if (parseInt(MAX) < parseInt(document.getElementById("decimal").innerHTML) + valueAdd) {
-                    console.log("overflow")
-                    silliness = "overflow"
-                    add(0)
-                }
-                else {
-                    add(valueAdd)
-                }
+            else {
+                add(valueAdd)
             }
     }})
 
 // return string with current value of each bit
 function getBits() {
     let bits = "";
-
-    if (silliness == "none") {
-        for(let i = 0; i < BITS; i++) {
-        bits = bits + document.getElementById('digit' + i).value;
-        }
+    for(let i = 0; i < BITS; i++) {
+    bits = bits + document.getElementById('digit' + i).value;
     }
-    else if (silliness == "overflow"){
-        for(let i = 0; i < BITS; i++) {
-            bits += 0
-        }
-    }
-    else {
-        for(let i = 0; i < BITS; i++) {
-            bits += 1
-        }
-    }
+    return bits;
 }
 // setter for DOM values
 function setConversions(binary) {
@@ -153,9 +116,9 @@ function decimal_2_base(decimal, base) {
 // toggle selected bit and recalculate
 function toggleBit(i) {
     //alert("Digit action: " + i );
-    const dig = document.getElementById('digit' + i);
-    const image = document.getElementById('bulb' + i);
-    const butt = document.getElementById('butt' + i);
+    var dig = document.getElementById('digit' + i);
+    var image = document.getElementById('bulb' + i);
+    var butt = document.getElementById('butt' + i);
     // Change digit and visual
     if (image.src.match(IMAGE_ON)) {
     dig.value = 0;
@@ -167,7 +130,7 @@ function toggleBit(i) {
     butt.innerHTML = MSG_OFF;
     }
     // Binary numbers
-    const binary = getBits();
+    var binary = getBits();
     setConversions(binary);
 }
 // add is positive integer, subtract is negative integer
@@ -176,9 +139,9 @@ function add(n) {
     // convert to decimal and do math
     let decimal = parseInt(binary, 2);
     if (n > 0) {  // PLUS
-    decimal += n;
+    decimal = MAX <= (decimal + n) ? 0 : decimal += n; // OVERFLOW or PLUS
     } else  {     // MINUS
-    decimal += n;
+    decimal = 0 >= (decimal + n) ? MAX : decimal += n; // OVERFLOW or MINUS
     }
     // convert the result back to binary
     binary = decimal_2_base(decimal, 2);
@@ -197,7 +160,6 @@ function add(n) {
         document.getElementById('butt' + i).innerHTML = MSG_ON;
     }
     }
-    silliness = "none"
     }
 
 
