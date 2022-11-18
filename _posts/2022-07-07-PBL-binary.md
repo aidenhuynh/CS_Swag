@@ -61,6 +61,14 @@ tags: [html, liquid, javascript]
     var valueAdd = ""
     var bitsSelected = false
 
+    document.getElementById("inputBox").addEventListener("keyup", function() {
+        event.preventDefault
+
+        if (event.key === "Enter") {
+            setBits()
+        }
+    })
+
     document.getElementById("inputAdd").addEventListener("keyup", function() {
         event.preventDefault
 
@@ -139,9 +147,9 @@ function add(n) {
     // convert to decimal and do math
     let decimal = parseInt(binary, 2);
     if (n > 0) {  // PLUS
-    decimal = MAX <= (decimal + n) ? 0 : decimal += n; // OVERFLOW or PLUS
+    decimal = MAX < (decimal + n) ? 0 : decimal += n; // OVERFLOW or PLUS
     } else  {     // MINUS
-    decimal = 0 >= (decimal + n) ? MAX : decimal += n; // OVERFLOW or MINUS
+    decimal = 0 > (decimal + n) ? MAX : decimal += n; // OVERFLOW or MINUS
     }
     // convert the result back to binary
     binary = decimal_2_base(decimal, 2);
