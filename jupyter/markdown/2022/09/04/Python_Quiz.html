@@ -152,18 +152,24 @@ window.onload = wrap_img;
 
 <span class="n">questions</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">firstQ</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" questions."</span><span class="p">)</span>
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"yes"</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span><span class="s2">": yes"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Great!"</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"no"</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span><span class="s2">": no"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Too bad!"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"I did not account for replies other than yes or no so L bozo 🦕"</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">firstQ</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
+    <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"yes"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span><span class="s2">": yes"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Great!"</span><span class="p">)</span>
+        <span class="n">firstQ</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"no"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span><span class="s2">": no"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Too bad!"</span><span class="p">)</span>
+        <span class="n">firstQ</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"It's a yes or no question."</span><span class="p">)</span>
 
 <span class="n">questionsList</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="s2">"What command is used to include other functions that were previously developed?"</span><span class="p">,</span> <span class="s2">"import"</span><span class="p">],</span>
@@ -180,6 +186,8 @@ window.onload = wrap_img;
     <span class="n">answer</span> <span class="o">=</span> <span class="n">QAPair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+    <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
     <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
         <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -229,23 +237,23 @@ window.onload = wrap_img;
 <pre>Hello, Aiden running /Users/Aiden/opt/anaconda3/bin/python
 You will be asked 6 questions.
 Question: Are you ready to take a test?
-Aiden: no
-Too bad!
+Aiden: yes
+Great!
 Question: What command is used to include other functions that were previously developed?
-import is correct!
+def is incorrect!
 Question: What command is used to evaluate correct or incorrect response in this example?
-if is correct!
+ is incorrect!
 Question: Each 'if' command contains an '_________' to determine a true or false condition?
-expression is correct!
+ is incorrect!
 Question: What command is used to define functions?
-def is correct!
+ is incorrect!
 Question: What are two or more lines of code called?
-sequence is correct!
+ is incorrect!
 Question: What command is used to show text on your screen?
-print is correct!
-Aiden, you scored 6/6
-That's 100.0 %!
-Perfect!
+ is incorrect!
+Aiden, you scored 0/6
+That's 0.0 %!
+Very cool!!
 </pre>
 </div>
 </div>
