@@ -93,9 +93,9 @@ layout: notebook
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Question: What language was this coded in?
-Python is incorrect!
+ is incorrect!
 Question: Sussy
-Among Us is incorrect!
+ is incorrect!
 Question: What letter comes after A in the alphabet?
  is incorrect!
 Question: What is 3+4?

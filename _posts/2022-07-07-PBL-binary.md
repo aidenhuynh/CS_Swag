@@ -72,7 +72,7 @@ tags: [html, liquid, javascript]
     document.getElementById("inputAdd").addEventListener("keyup", function() {
         event.preventDefault
 
-        if (event.key === "Enter") { // Mr. Mortensen if you read this code I am so sorry.
+        if (event.key === "Enter") {
             valueAdd = parseInt(document.getElementById('inputAdd').value)
             if (bitsSelected == false) {
                 document.getElementById('message2').innerHTML = "Please enter desired bits before trying to add values."
