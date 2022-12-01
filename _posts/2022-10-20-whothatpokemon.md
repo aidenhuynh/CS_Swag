@@ -313,7 +313,7 @@ title: Who's That Pokémon?
     }
 
     function getPokemon(pokeMin, pokeMax) {
-        fetch('https://pokeapi.co/api/v2/pokemon/' + getRandId(pokeMin, pokeMax), options)
+        fetch('https://pokeapi.co/api/v3/pokemon/' + getRandId(pokeMin, pokeMax), options)
         .then(response => response.json().then(data => {
         pokeName = data.name
         pokeID = data.id
