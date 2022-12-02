@@ -151,82 +151,82 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">import</span> <span class="nx">json</span><span class="p">,</span> <span class="nx">requests</span><span class="p">,</span> <span class="nx">getpass</span><span class="p">,</span> <span class="nx">sys</span>
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
 
-<span class="kr">class</span> <span class="nx">color</span><span class="o">:</span>
-    <span class="nx">BOLD</span> <span class="o">=</span> <span class="s1">'\033[91m'</span>
-    <span class="nx">UNDERLINE</span> <span class="o">=</span> <span class="s1">'\033[91m'</span>
-    <span class="nx">END</span> <span class="o">=</span> <span class="s1">'\033[0m'</span>
-<span class="err">#</span> <span class="nx">This</span> <span class="nx">doesn</span><span class="s1">'t really work except make things red, don'</span><span class="nx">t</span> <span class="nx">know</span> <span class="nx">why</span>
+<span class="k">class</span> <span class="nc">color</span><span class="p">:</span>
+    <span class="n">BOLD</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[91m'</span>
+    <span class="n">UNDERLINE</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[91m'</span>
+    <span class="n">END</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[0m'</span>
+<span class="c1"># This doesn't really work except make things red, don't know why</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">BOLD</span> <span class="o">+</span> <span class="s2">"YouTube Video Downloader with APIs: \n"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">BOLD</span> <span class="o">+</span> <span class="s2">"YouTube Video Downloader with APIs: </span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
 
-<span class="nx">apiFound</span> <span class="o">=</span> <span class="nx">False</span>
+<span class="n">apiFound</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="k">while</span> <span class="nx">apiFound</span> <span class="o">==</span> <span class="nx">False</span><span class="o">:</span>
+<span class="k">while</span> <span class="n">apiFound</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
     
-    <span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">UNDERLINE</span> <span class="o">+</span> <span class="s2">"Enter a valid YouTube Video URL or ID:"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
-    <span class="nx">videoURL</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">"Enter a valid YouTube Video URL or ID:"</span><span class="p">)</span>
-    <span class="nx">videoID</span> <span class="o">=</span> <span class="nx">videoURL</span><span class="p">[</span><span class="o">-</span><span class="mf">11</span><span class="o">:</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">UNDERLINE</span> <span class="o">+</span> <span class="s2">"Enter a valid YouTube Video URL or ID:"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+    <span class="n">videoURL</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a valid YouTube Video URL or ID:"</span><span class="p">)</span>
+    <span class="n">videoID</span> <span class="o">=</span> <span class="n">videoURL</span><span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">:]</span>
 
-    <span class="nx">print</span><span class="p">(</span><span class="nx">getpass</span><span class="p">.</span><span class="nx">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nx">videoURL</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="n">videoURL</span><span class="p">)</span>
     
-    <span class="nx">url</span> <span class="o">=</span> <span class="s2">"https://ytstream-download-youtube-videos.p.rapidapi.com/dl"</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://ytstream-download-youtube-videos.p.rapidapi.com/dl"</span>
 
-    <span class="nx">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"id"</span><span class="o">:</span><span class="nx">videoID</span><span class="p">}</span>
+    <span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"id"</span><span class="p">:</span><span class="n">videoID</span><span class="p">}</span>
 
-    <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">"X-RapidAPI-Key"</span><span class="o">:</span> <span class="s2">"e51c67fa22mshec43200baacf5b3p148027jsn10e3e84c629e"</span><span class="p">,</span>
-        <span class="s2">"X-RapidAPI-Host"</span><span class="o">:</span> <span class="s2">"ytstream-download-youtube-videos.p.rapidapi.com"</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"e51c67fa22mshec43200baacf5b3p148027jsn10e3e84c629e"</span><span class="p">,</span>
+        <span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"ytstream-download-youtube-videos.p.rapidapi.com"</span>
     <span class="p">}</span>
 
-    <span class="nx">response</span> <span class="o">=</span> <span class="nx">requests</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">headers</span><span class="o">=</span><span class="nx">headers</span><span class="p">,</span> <span class="nx">params</span><span class="o">=</span><span class="nx">querystring</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
 
-    <span class="nx">json</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
-    <span class="k">if</span> <span class="nx">json</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"fail"</span><span class="o">:</span>
-        <span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">BOLD</span> <span class="o">+</span> <span class="s2">"\nYou have inputted an invalid YouTube ID, please try again.\n"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
-    <span class="k">else</span><span class="o">:</span>
-        <span class="nx">apiFound</span> <span class="o">=</span> <span class="nx">True</span>
+    <span class="k">if</span> <span class="n">json</span><span class="p">[</span><span class="s1">'status'</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"fail"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">BOLD</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">You have inputted an invalid YouTube ID, please try again.</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">apiFound</span> <span class="o">=</span> <span class="kc">True</span>
     
-<span class="nx">formatList</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'formats'</span><span class="p">)</span>
+<span class="n">formatList</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'formats'</span><span class="p">)</span>
 
-<span class="nx">qualityFound</span> <span class="o">=</span> <span class="nx">False</span>
+<span class="n">qualityFound</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="k">while</span> <span class="nx">qualityFound</span> <span class="o">==</span> <span class="nx">False</span><span class="o">:</span>    
-    <span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">UNDERLINE</span> <span class="o">+</span> <span class="s2">"\nAvailable qualities:"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">qualityFound</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>    
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">UNDERLINE</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Available qualities:"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
     
-    <span class="nx">i</span> <span class="o">=</span> <span class="mf">2</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
 
-    <span class="k">while</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mf">0</span><span class="o">:</span>
-        <span class="nx">print</span><span class="p">(</span><span class="nx">formatList</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">])</span>
-        <span class="nx">i</span> <span class="o">-=</span> <span class="mf">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">formatList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
         
-    <span class="nx">print</span><span class="p">(</span><span class="s2">"Note: 144p is "</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">BOLD</span> <span class="o">+</span> <span class="s2">"AUDIO-ONLY"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Note: 144p is "</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">BOLD</span> <span class="o">+</span> <span class="s2">"AUDIO-ONLY"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
     
-    <span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">UNDERLINE</span> <span class="o">+</span> <span class="s2">"\nEnter chosen quality (from the list):"</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
-    <span class="nx">chosenQuality</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">"Enter chosen quality (from the list)"</span><span class="p">)</span>
-    <span class="nx">print</span><span class="p">(</span><span class="nx">getpass</span><span class="p">.</span><span class="nx">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nx">chosenQuality</span><span class="p">)</span>
-    <span class="nx">chosenQuality</span><span class="p">.</span><span class="nx">lower</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">UNDERLINE</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Enter chosen quality (from the list):"</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+    <span class="n">chosenQuality</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter chosen quality (from the list)"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="n">chosenQuality</span><span class="p">)</span>
+    <span class="n">chosenQuality</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
-    <span class="nx">downloadURL</span> <span class="o">=</span> <span class="mf">0</span>
+    <span class="n">downloadURL</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">if</span> <span class="nx">chosenQuality</span> <span class="o">==</span> <span class="nx">formatList</span><span class="p">[</span><span class="mf">0</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]</span><span class="o">:</span>
-        <span class="nx">downloadURL</span> <span class="o">=</span> <span class="mf">0</span>
-        <span class="nx">qualityFound</span> <span class="o">=</span> <span class="nx">True</span>
+    <span class="k">if</span> <span class="n">chosenQuality</span> <span class="o">==</span> <span class="n">formatList</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]:</span>
+        <span class="n">downloadURL</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">qualityFound</span> <span class="o">=</span> <span class="kc">True</span>
         
-    <span class="nx">elif</span> <span class="nx">chosenQuality</span> <span class="o">==</span> <span class="nx">formatList</span><span class="p">[</span><span class="mf">1</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]</span><span class="o">:</span>
-        <span class="nx">downloadURL</span> <span class="o">=</span> <span class="mf">1</span>
-        <span class="nx">qualityFound</span> <span class="o">=</span> <span class="nx">True</span>
+    <span class="k">elif</span> <span class="n">chosenQuality</span> <span class="o">==</span> <span class="n">formatList</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]:</span>
+        <span class="n">downloadURL</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">qualityFound</span> <span class="o">=</span> <span class="kc">True</span>
         
-    <span class="nx">elif</span> <span class="nx">chosenQuality</span> <span class="o">==</span> <span class="nx">formatList</span><span class="p">[</span><span class="mf">2</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]</span><span class="o">:</span>
-        <span class="nx">downloadURL</span> <span class="o">=</span> <span class="mf">2</span>
-        <span class="nx">qualityFound</span> <span class="o">=</span> <span class="nx">True</span>
+    <span class="k">elif</span> <span class="n">chosenQuality</span> <span class="o">==</span> <span class="n">formatList</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">'qualityLabel'</span><span class="p">]:</span>
+        <span class="n">downloadURL</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">qualityFound</span> <span class="o">=</span> <span class="kc">True</span>
         
-    <span class="k">else</span><span class="o">:</span>
-        <span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">BOLD</span> <span class="o">+</span> <span class="s2">"\nThe selected resolution is not available, please try again."</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">BOLD</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">The selected resolution is not available, please try again."</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
         
-<span class="nx">print</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">UNDERLINE</span> <span class="o">+</span> <span class="s2">"\nDownload link:\n"</span> <span class="o">+</span><span class="nx">formatList</span><span class="p">[</span><span class="nx">downloadURL</span><span class="p">][</span><span class="s1">'url'</span><span class="p">]</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">END</span> <span class="o">+</span> <span class="s2">"\n\nTo download, click on the three dots in the bottom-right then press download."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">UNDERLINE</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Download link:</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span><span class="n">formatList</span><span class="p">[</span><span class="n">downloadURL</span><span class="p">][</span><span class="s1">'url'</span><span class="p">]</span> <span class="o">+</span> <span class="n">color</span><span class="o">.</span><span class="n">END</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">To download, click on the three dots in the bottom-right then press download."</span><span class="p">)</span>
 </pre></div>
 
     </div>
