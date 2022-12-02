@@ -145,7 +145,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">qAndRsp</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">msg</span>
 
 <span class="n">questionsList</span> <span class="o">=</span> <span class="p">[</span>
@@ -167,13 +167,15 @@ window.onload = wrap_img;
     <span class="n">answer</span> <span class="o">=</span> <span class="n">QAPair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="n">rsp</span> <span class="o">=</span> <span class="n">qAndRsp</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-    <span class="n">rsp</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">rspLower</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     
-    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rspLower</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
         <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 
 <span class="n">quotient</span><span class="o">=</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span>
 <span class="n">percentage</span><span class="o">=</span><span class="nb">round</span><span class="p">((</span><span class="n">quotient</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
@@ -214,21 +216,28 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Question: What language was this coded in?
- is incorrect!
+python is correct!
+
 Question: Sussy
- is incorrect!
+AMOGUS is incorrect!
+
 Question: What letter comes after A in the alphabet?
- is incorrect!
+b is correct!
+
 Question: What is 3+4?
- is incorrect!
+7 is correct!
+
 Question: What is my least favorite class?
- is incorrect!
+CSP is correct!
+
 Question: aAAAAAaaaaaAaAaaAaaAAaaAAaaAaAaaa
- is correct!
+AAAHHHH is incorrect!
+
 Question: I quit
- is incorrect!
-You scored 1/7
-That's 14.29 %!
+me too is incorrect!
+
+You scored 4/7
+That's 57.14 %!
 Skill issue?
 </pre>
 </div>
