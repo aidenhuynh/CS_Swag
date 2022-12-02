@@ -6,7 +6,7 @@ toc: true
 branch: master
 badges: true
 comments: true
-categories: [jupyter,markdown]
+categories: [jupyter,markdown,student_teaching]
 nb_path: _notebooks/2022-11-30-randomvalues.ipynb
 layout: notebook
 ---

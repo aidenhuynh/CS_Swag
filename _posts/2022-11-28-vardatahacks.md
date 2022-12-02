@@ -6,7 +6,8 @@ toc: true
 branch: master
 badges: true
 comments: true
-categories: [jupyter,markdown]
+permalink: /jupyter/vardata
+categories: [jupyter,markdown,student_teaching]
 nb_path: _notebooks/2022-11-28-vardatahacks.ipynb
 layout: notebook
 ---
