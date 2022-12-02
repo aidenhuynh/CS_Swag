@@ -22,13 +22,15 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>PROCEDURE Dice(n)
-    sum ← 0
-    REPEAT UNTIL n = 0
-        sum ← sum + RANDOM(1, 6)
-        n ← n - 1
-    RETURN sum</code></pre>
+<p><span style="color:white"></p>
+<div class="highlight"><pre><span></span><span class="n">PROCEDURE</span> <span class="n">Dice</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">sum</span> <span class="err">←</span> <span class="mi">0</span>
+    <span class="n">REPEAT</span> <span class="n">UNTIL</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">sum</span> <span class="err">←</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">RANDOM</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">n</span> <span class="err">←</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">RETURN</span> <span class="n">sum</span>
+</pre></div>
+<p>&lt;/span&gt;</p>
 
 </div>
 </div>
