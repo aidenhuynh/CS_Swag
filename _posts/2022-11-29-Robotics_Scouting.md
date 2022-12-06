@@ -1,3 +1,17 @@
+<table>
+	<tr>
+		<th id="tb">Team Number</th>
+		<th id="name">Team Name</th>
+		<th>School</th>
+		<th>Location</th>
+		<th>Sponsors</th>
+		<th>Rookie</th>
+		<th>Past Awards</th>
+		<th>Regionals</th>
+		<th>Past Rankings</th>
+	</tr>
+</table>
+
 <script>
 const options = {
 	method: 'GET',
