@@ -9,7 +9,13 @@ title: Week 15 - Team Grades
 
 {% include submenu.html %}
 
-<table>
+<style>
+    .tableeee {
+        background-color: rgba(34,34,34,255);
+    }
+</style>
+
+<table class="tableeee">
     <tr>
         <th>Lesson</th>
         <th>Aiden</th>
@@ -29,11 +35,17 @@ title: Week 15 - Team Grades
     <tr>
         <td><a href="https://docs.google.com/document/d/1d9sziRVrooF21O15upa3sisveOPGUUIW6yE7x0l64no/edit">Section 8-10</a></td>
         <td>1/1</td>
-        <td>0.75/1*</td>
+        <td>0.75/1</td>
         <td>0.7/1</td>
         <td>0.5/1</td>
         <td>0.9/1</td>
     </tr>
+    <tr>
+        <td>Total</td>
+        <td>1.95/2</td>
+        <td>1.7/2</td>
+        <td>1.55/2</td>
+        <td>0.85/2</td>
+        <td>1.85/2</td>
+    </tr>
 </table>
-
-*on section 8-10 grades for Jeffrey, there is only one grade posted for the name jeffrey but there are two in this class.
