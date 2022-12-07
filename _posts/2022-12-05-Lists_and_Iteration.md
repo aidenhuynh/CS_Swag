@@ -1103,7 +1103,7 @@ Z X C V B N M , . /
         <span class="n">letterFound</span> <span class="o">=</span> <span class="kc">True</span>
         
         <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">letterFound</span> <span class="o">=</span> <span class="kc">False</span>
