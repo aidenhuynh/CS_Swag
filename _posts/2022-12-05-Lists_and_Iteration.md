@@ -1104,7 +1104,7 @@ Z X C V B N M , . /
         
         <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">letterFound</span> <span class="o">=</span> <span class="kc">False</span>
                 
@@ -1126,10 +1126,10 @@ Z X C V B N M , . /
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>                          
-      R      U            
-          H            
-        B            
+<pre>  1   2   3                     
+                        
+                      
+                    
 </pre>
 </div>
 </div>
