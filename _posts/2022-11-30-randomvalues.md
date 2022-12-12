@@ -61,10 +61,14 @@ layout: notebook
 <li>An Application Program Interface, or API, contains specific direction for how the procedures in a library behave and can be used. </li>
 <li>An API acts as a gateway for the imported procedures from a library to interact with the rest of your code.</li>
 </ul>
-<h3 id="Activity:-Walkthrough-with-NumPy">Activity: Walkthrough with NumPy<a class="anchor-link" href="#Activity:-Walkthrough-with-NumPy"> </a></h3><p>Install NumPy on VSCode:
-Open New Terminal In VSCode:
-pip3 install --upgrade pip
-pip install numpy</p>
+<h3 id="Activity:-Walkthrough-with-NumPy">Activity: Walkthrough with NumPy<a class="anchor-link" href="#Activity:-Walkthrough-with-NumPy"> </a></h3><ul>
+<li>Install NumPy on VSCode:<ol>
+<li>Open New Terminal In VSCode:</li>
+<li>pip3 install --upgrade pip</li>
+<li>pip install numpy </li>
+</ol>
+</li>
+</ul>
 <p>REMEMBER: When running library code cells use Python Interpreter Conda (Version 3.9.12)</p>
 <h3 id="Example-of-using-NumPy-for-arrays:">Example of using NumPy for arrays:<a class="anchor-link" href="#Example-of-using-NumPy-for-arrays:"> </a></h3>
 </div>
