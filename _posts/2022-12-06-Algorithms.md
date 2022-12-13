@@ -7,7 +7,7 @@ toc: true
 badges: false
 comments: true
 permalink: /jupyter/algorithms
-categories: [lesson]
+categories: [lessons]
 nb_path: _notebooks/2022-12-06-Algorithms.ipynb
 layout: notebook
 ---

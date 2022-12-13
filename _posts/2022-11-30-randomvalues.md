@@ -7,7 +7,7 @@ branch: master
 badges: true
 comments: true
 permalink: /jupyter/libraries
-categories: [jupyter,markdown]
+categories: [lessons]
 nb_path: _notebooks/2022-11-30-randomvalues.ipynb
 layout: notebook
 ---

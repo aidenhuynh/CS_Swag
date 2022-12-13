@@ -5,6 +5,7 @@ title: Unit 3 Sections 12-13
 toc: true
 badges: false
 categories: [lessons]
+permalink: /jupyter/procedures
 nb_path: _notebooks/2022-12-08-procedures.ipynb
 layout: notebook
 ---

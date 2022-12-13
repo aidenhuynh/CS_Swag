@@ -7,7 +7,7 @@ branch: master
 badges: true
 comments: true
 permalink: /jupyter/vardata
-categories: [jupyter,markdown,student_teaching]
+categories: [lessons]
 nb_path: _notebooks/2022-11-28-vardatahacks.ipynb
 layout: notebook
 ---
