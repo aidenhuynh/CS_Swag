@@ -5,7 +5,7 @@ title: Unit 3 Sections 17-18
 toc: true
 badges: false
 categories: [lessons]
-permalink: /lesson
+permalink: /jupyter/efficiency
 nb_path: _notebooks/2022-12-14-efficiency.ipynb
 layout: notebook
 ---
@@ -350,6 +350,7 @@ There are two types of decision problems that Collegeboard goes over:</p>
     <span class="n">num1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number&quot;</span><span class="p">)</span>
     <span class="n">operator</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter an operator (+, -, *, /, **, %&quot;</span><span class="p">)</span>
     <span class="n">num2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter another number&quot;</span><span class="p">)</span>
+    <span class="n">unsolved</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">if</span> <span class="n">num1</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">num2</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">num1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span>
@@ -357,7 +358,7 @@ There are two types of decision problems that Collegeboard goes over:</p>
         
         <span class="k">if</span> <span class="n">operator</span> <span class="o">==</span> <span class="s2">&quot;+&quot;</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; + &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;= &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">))</span>
-            <span class="c1"># unsolved =False</span>
+            <span class="c1"># unsolved = False</span>
             
         <span class="k">elif</span> <span class="n">operator</span> <span class="o">==</span> <span class="s2">&quot;-&quot;</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;= &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">))</span>
@@ -398,6 +399,27 @@ There are two types of decision problems that Collegeboard goes over:</p>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1.0 + 1.0= 2.0
 10.0 / 4.0= 2.5
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
+Invalid numbers, try again
 Invalid numbers, try again
 </pre>
 </div>
