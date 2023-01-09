@@ -58,7 +58,6 @@ title: Week 17 - Create Task Grading Hacks
 * For Row 3: List does not manage complexity, as strings could just be used. I believe complexity is referring to simplifying the code, not the coding process.
 
 ### Performance Task #2
-
 <table>
     <tr>
         <th>Row #</th>
