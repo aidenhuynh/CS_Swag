@@ -16,8 +16,9 @@ title: Week 17 - Create Task Grading Hacks
 |4|1/1|Procedure of at least one parameter has function described and how it contributes to the program purpose.|
 |5|1/1|Algorithm is described as in row 4, and steps are clear enough for replication.|
 |6|1/1|Calls return different values and are described.|
-|Overall: 6/6|
-|Actual 4/6|
+Overall: 6/6
+Actual 4/6
+
 * For Row 1: The function of the program is described rather than the purpose
 * For Row 3: List does not manage complexity, as strings could just be used. I believe complexity is referring to simplifying the code, not the coding process.
 
@@ -30,5 +31,5 @@ title: Week 17 - Create Task Grading Hacks
 |4|1/1|Procedure with at least one parameter is shown being called and contribution to purpose is clear|
 |5|1/1|Algorithm's steps clearly listed and functions as described in row 4.|
 |6|1/1|Calls return different values and are described|
-|Overall: 6/6|
-|Actual: 6/6|
+Overall: 6/6
+Actual: 6/6
