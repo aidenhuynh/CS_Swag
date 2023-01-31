@@ -127,3 +127,10 @@ comments: true
         <td>returns all rows of the table of boxes</td>
     </tr>
 </table>
+
+# Video Features
+
+* Input: searched item
+* Output: new table rows
+* Functionality: change table to match search input
+* Plan: Search the word "boxes" and the table will have only matching items
