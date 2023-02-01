@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Hacks for week 4
-categories: [markdown]
+categories: [markdown, review_ticket]
 title: Week 4 Review Ticket - Python Web Server Project
 ---
 <ul>

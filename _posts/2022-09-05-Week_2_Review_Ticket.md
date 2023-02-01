@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: hacks for week 2
-categories: [markdown]
+categories: [markdown, review_ticket]
 title: Week 2 - Data Abstraction & HTML Fragments
 ---
 # Week 2 Review Ticket - Data Abstraction & HTML Fragments

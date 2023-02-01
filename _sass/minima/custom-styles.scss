@@ -2,7 +2,15 @@
 /*--- IMPORT STYLES FOR FASTPAGES ---*/
 @import "minima/fastpages-styles";   
 
+td {
+    background-color:#181818;
+    vertical-align:baseline
+}
 
+table {
+    color: #bbbbbb;
+    font: 400 16px/1.5 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif
+}
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/

@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: hacks for week 6
-categories: [markdown]
+categories: [markdown, review_ticket]
 title: Week 6 - Deployment
 ---
 # Week 6 Review Ticket

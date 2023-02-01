@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: hacks for week 3
-categories: [markdown]
+categories: [markdown, review_ticket]
 title: Week 3 - Creative Development
 ---
 # Week 3 Review Ticket - Creative Development
