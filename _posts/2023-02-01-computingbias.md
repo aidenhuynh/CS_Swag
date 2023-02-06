@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Computing Bias | Crowdsourcing
+description: Computing Bias
 categories: [markdown, techtalk]
-title: Big Ideas 5.3 and 5.4
+title: Big Idea 5.3
 comments: true
 ---
 {% include submenu.html %}
