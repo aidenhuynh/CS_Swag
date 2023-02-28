@@ -24,7 +24,7 @@ url: "https://aidenhuynh.github.io" # the base hostname & protocol for your site
 # 
 ####  Scenario Two: If you have a Custom Domain #####
 # 1. If your domain does NOT have a subpath, this leave this value as ""
-# 2. If your domain does have a subpath, you must preceed the value with a / and NOT have a / at the end.  
+# 2. If your domain does have a subpath, you must precede the value with a / and NOT have a / at the end.  
 #      For example: 
 #           "" is valid
 #           "/blog"        is valid
@@ -40,8 +40,9 @@ baseurl: "/CS_Swag" # the subpath of your site, e.g. "/blog".
 minima:
   skin: dark
   #  social_links:
-  #  github: CS_Swag
-  #  youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
+  #    twitter: NighthawkCoding
+  #    github: nighthawkcoders
+  #   youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
   social_links:
     - { platform: github, user_url: ”
 https://github.com/CS_Swag
@@ -57,9 +58,9 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
-# Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
+# Set this to true to turn on annotations with hypothes.is(https://web.hypothes.is/)
 annotations: false
 
 # Set this to true to display tags on each post
@@ -72,6 +73,7 @@ exclude:
   - docker-compose.yml
   - action.yml
   - Makefile
+  - settings.ini
 
 # this setting allows you to keep pages organized in the _pages folder
 include:
@@ -104,6 +106,7 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
+
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
 paginate: 15
@@ -130,5 +133,3 @@ feed:
   posts_limit: 5 #default posts_limit: 10
   excerpt_only: true
   
-exclude:
-  - settings.ini

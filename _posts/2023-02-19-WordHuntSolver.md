@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: Easily win GamePigeon!!
-categories: [markdown, review_ticket]
+categories: [markdown, projects]
 title: Word Hunt Solver
 comments: true
 ---
