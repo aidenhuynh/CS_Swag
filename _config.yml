@@ -38,7 +38,7 @@ baseurl: "/CS_Swag" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
-  skin: auto
+  skin: dark
   #  social_links:
   #  github: CS_Swag
   #  youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
