@@ -429,6 +429,10 @@ td { background-color: #181818; vertical-align: baseline; }
 
 table { color: #bbbbbb; font: 400 16px/1.5 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif; }
 
+pre { color: #ffffff; }
+
+code { color: #ffffff; }
+
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
