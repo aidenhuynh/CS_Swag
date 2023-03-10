@@ -10,8 +10,8 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics." />
 <meta property="og:description" content="Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics." />
-<link rel="canonical" href="https://aidenhuynh.github.io/CS_Swag/2023/03/08/pandas.html" />
-<meta property="og:url" content="https://aidenhuynh.github.io/CS_Swag/2023/03/08/pandas.html" />
+<link rel="canonical" href="https://aidenhuynh.github.io/CS_Swag/jupyter/pandas" />
+<meta property="og:url" content="https://aidenhuynh.github.io/CS_Swag/jupyter/pandas" />
 <meta property="og:site_name" content="coolest blog EVER?! (clickbait)" />
 <meta property="og:image" content="https://aidenhuynh.github.io/CS_Swag/images/python.png" />
 <meta property="og:type" content="article" />
@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://aidenhuynh.github.io/CS_Swag/images/python.png" />
 <meta property="twitter:title" content="Unit 2.3 Extracting Information from Data, Pandas" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-08T00:00:00-06:00","datePublished":"2023-03-08T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","image":"https://aidenhuynh.github.io/CS_Swag/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://aidenhuynh.github.io/CS_Swag/2023/03/08/pandas.html"},"url":"https://aidenhuynh.github.io/CS_Swag/2023/03/08/pandas.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-08T00:00:00-06:00","datePublished":"2023-03-08T00:00:00-06:00","description":"Data connections, trends, and correlation. Pandas is introduced as it could be valuable for PBL, data validation, as well as understanding College Board Topics.","headline":"Unit 2.3 Extracting Information from Data, Pandas","image":"https://aidenhuynh.github.io/CS_Swag/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://aidenhuynh.github.io/CS_Swag/jupyter/pandas"},"url":"https://aidenhuynh.github.io/CS_Swag/jupyter/pandas"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CS_Swag/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aidenhuynh.github.io/CS_Swag/feed.xml" title="coolest blog EVER?! (clickbait)" /><link rel="shortcut icon" type="image/x-icon" href="/CS_Swag/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -214,164 +214,6 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/Aiden/CS_Swag/_notebooks/2023-03-08-pandas.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/Aiden/CS_Swag/_notebooks/2023-03-08-pandas.ipynb#W3sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> '''Pandas is used to gather data sets through its DataFrames implementation'''
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/Aiden/CS_Swag/_notebooks/2023-03-08-pandas.ipynb#W3sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> import pandas as pd
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/__init__.py:48</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     45</span> # let init-time option registration happen
-<span class="ansi-green-intense-fg ansi-bold">     46</span> import pandas.core.config_init
-<span class="ansi-green-fg">---&gt; 48</span> from pandas.core.api import (
-<span class="ansi-green-intense-fg ansi-bold">     49</span>     # dtype
-<span class="ansi-green-intense-fg ansi-bold">     50</span>     Int8Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     51</span>     Int16Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     52</span>     Int32Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     53</span>     Int64Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     54</span>     UInt8Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     55</span>     UInt16Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     56</span>     UInt32Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     57</span>     UInt64Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     58</span>     Float32Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     59</span>     Float64Dtype,
-<span class="ansi-green-intense-fg ansi-bold">     60</span>     CategoricalDtype,
-<span class="ansi-green-intense-fg ansi-bold">     61</span>     PeriodDtype,
-<span class="ansi-green-intense-fg ansi-bold">     62</span>     IntervalDtype,
-<span class="ansi-green-intense-fg ansi-bold">     63</span>     DatetimeTZDtype,
-<span class="ansi-green-intense-fg ansi-bold">     64</span>     StringDtype,
-<span class="ansi-green-intense-fg ansi-bold">     65</span>     BooleanDtype,
-<span class="ansi-green-intense-fg ansi-bold">     66</span>     # missing
-<span class="ansi-green-intense-fg ansi-bold">     67</span>     NA,
-<span class="ansi-green-intense-fg ansi-bold">     68</span>     isna,
-<span class="ansi-green-intense-fg ansi-bold">     69</span>     isnull,
-<span class="ansi-green-intense-fg ansi-bold">     70</span>     notna,
-<span class="ansi-green-intense-fg ansi-bold">     71</span>     notnull,
-<span class="ansi-green-intense-fg ansi-bold">     72</span>     # indexes
-<span class="ansi-green-intense-fg ansi-bold">     73</span>     Index,
-<span class="ansi-green-intense-fg ansi-bold">     74</span>     CategoricalIndex,
-<span class="ansi-green-intense-fg ansi-bold">     75</span>     RangeIndex,
-<span class="ansi-green-intense-fg ansi-bold">     76</span>     MultiIndex,
-<span class="ansi-green-intense-fg ansi-bold">     77</span>     IntervalIndex,
-<span class="ansi-green-intense-fg ansi-bold">     78</span>     TimedeltaIndex,
-<span class="ansi-green-intense-fg ansi-bold">     79</span>     DatetimeIndex,
-<span class="ansi-green-intense-fg ansi-bold">     80</span>     PeriodIndex,
-<span class="ansi-green-intense-fg ansi-bold">     81</span>     IndexSlice,
-<span class="ansi-green-intense-fg ansi-bold">     82</span>     # tseries
-<span class="ansi-green-intense-fg ansi-bold">     83</span>     NaT,
-<span class="ansi-green-intense-fg ansi-bold">     84</span>     Period,
-<span class="ansi-green-intense-fg ansi-bold">     85</span>     period_range,
-<span class="ansi-green-intense-fg ansi-bold">     86</span>     Timedelta,
-<span class="ansi-green-intense-fg ansi-bold">     87</span>     timedelta_range,
-<span class="ansi-green-intense-fg ansi-bold">     88</span>     Timestamp,
-<span class="ansi-green-intense-fg ansi-bold">     89</span>     date_range,
-<span class="ansi-green-intense-fg ansi-bold">     90</span>     bdate_range,
-<span class="ansi-green-intense-fg ansi-bold">     91</span>     Interval,
-<span class="ansi-green-intense-fg ansi-bold">     92</span>     interval_range,
-<span class="ansi-green-intense-fg ansi-bold">     93</span>     DateOffset,
-<span class="ansi-green-intense-fg ansi-bold">     94</span>     # conversion
-<span class="ansi-green-intense-fg ansi-bold">     95</span>     to_numeric,
-<span class="ansi-green-intense-fg ansi-bold">     96</span>     to_datetime,
-<span class="ansi-green-intense-fg ansi-bold">     97</span>     to_timedelta,
-<span class="ansi-green-intense-fg ansi-bold">     98</span>     # misc
-<span class="ansi-green-intense-fg ansi-bold">     99</span>     Flags,
-<span class="ansi-green-intense-fg ansi-bold">    100</span>     Grouper,
-<span class="ansi-green-intense-fg ansi-bold">    101</span>     factorize,
-<span class="ansi-green-intense-fg ansi-bold">    102</span>     unique,
-<span class="ansi-green-intense-fg ansi-bold">    103</span>     value_counts,
-<span class="ansi-green-intense-fg ansi-bold">    104</span>     NamedAgg,
-<span class="ansi-green-intense-fg ansi-bold">    105</span>     array,
-<span class="ansi-green-intense-fg ansi-bold">    106</span>     Categorical,
-<span class="ansi-green-intense-fg ansi-bold">    107</span>     set_eng_float_format,
-<span class="ansi-green-intense-fg ansi-bold">    108</span>     Series,
-<span class="ansi-green-intense-fg ansi-bold">    109</span>     DataFrame,
-<span class="ansi-green-intense-fg ansi-bold">    110</span> )
-<span class="ansi-green-intense-fg ansi-bold">    112</span> from pandas.core.arrays.sparse import SparseDtype
-<span class="ansi-green-intense-fg ansi-bold">    114</span> from pandas.tseries.api import infer_freq
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/api.py:48</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     46</span> from pandas.core.construction import array
-<span class="ansi-green-intense-fg ansi-bold">     47</span> from pandas.core.flags import Flags
-<span class="ansi-green-fg">---&gt; 48</span> from pandas.core.groupby import (
-<span class="ansi-green-intense-fg ansi-bold">     49</span>     Grouper,
-<span class="ansi-green-intense-fg ansi-bold">     50</span>     NamedAgg,
-<span class="ansi-green-intense-fg ansi-bold">     51</span> )
-<span class="ansi-green-intense-fg ansi-bold">     52</span> from pandas.core.indexes.api import (
-<span class="ansi-green-intense-fg ansi-bold">     53</span>     CategoricalIndex,
-<span class="ansi-green-intense-fg ansi-bold">     54</span>     DatetimeIndex,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     64</span>     UInt64Index,
-<span class="ansi-green-intense-fg ansi-bold">     65</span> )
-<span class="ansi-green-intense-fg ansi-bold">     66</span> from pandas.core.indexes.datetimes import (
-<span class="ansi-green-intense-fg ansi-bold">     67</span>     bdate_range,
-<span class="ansi-green-intense-fg ansi-bold">     68</span>     date_range,
-<span class="ansi-green-intense-fg ansi-bold">     69</span> )
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/groupby/__init__.py:1</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span> from pandas.core.groupby.generic import (
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     DataFrameGroupBy,
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     NamedAgg,
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     SeriesGroupBy,
-<span class="ansi-green-intense-fg ansi-bold">      5</span> )
-<span class="ansi-green-intense-fg ansi-bold">      6</span> from pandas.core.groupby.groupby import GroupBy
-<span class="ansi-green-intense-fg ansi-bold">      7</span> from pandas.core.groupby.grouper import Grouper
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/groupby/generic.py:70</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     68</span> import pandas.core.common as com
-<span class="ansi-green-intense-fg ansi-bold">     69</span> from pandas.core.construction import create_series_with_explicit_dtype
-<span class="ansi-green-fg">---&gt; 70</span> from pandas.core.frame import DataFrame
-<span class="ansi-green-intense-fg ansi-bold">     71</span> from pandas.core.generic import NDFrame
-<span class="ansi-green-intense-fg ansi-bold">     72</span> from pandas.core.groupby import base
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py:193</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">    180</span> from pandas.core.internals.construction import (
-<span class="ansi-green-intense-fg ansi-bold">    181</span>     arrays_to_mgr,
-<span class="ansi-green-intense-fg ansi-bold">    182</span>     dataclasses_to_dicts,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    190</span>     treat_as_nested,
-<span class="ansi-green-intense-fg ansi-bold">    191</span> )
-<span class="ansi-green-intense-fg ansi-bold">    192</span> from pandas.core.reshape.melt import melt
-<span class="ansi-green-fg">--&gt; 193</span> from pandas.core.series import Series
-<span class="ansi-green-intense-fg ansi-bold">    194</span> from pandas.core.shared_docs import _shared_docs
-<span class="ansi-green-intense-fg ansi-bold">    195</span> from pandas.core.sorting import (
-<span class="ansi-green-intense-fg ansi-bold">    196</span>     get_group_index,
-<span class="ansi-green-intense-fg ansi-bold">    197</span>     lexsort_indexer,
-<span class="ansi-green-intense-fg ansi-bold">    198</span>     nargsort,
-<span class="ansi-green-intense-fg ansi-bold">    199</span> )
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/series.py:27</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> import numpy as np
-<span class="ansi-green-intense-fg ansi-bold">     25</span> from pandas._config import get_option
-<span class="ansi-green-fg">---&gt; 27</span> from pandas._libs import (
-<span class="ansi-green-intense-fg ansi-bold">     28</span>     lib,
-<span class="ansi-green-intense-fg ansi-bold">     29</span>     properties,
-<span class="ansi-green-intense-fg ansi-bold">     30</span>     reshape,
-<span class="ansi-green-intense-fg ansi-bold">     31</span>     tslibs,
-<span class="ansi-green-intense-fg ansi-bold">     32</span> )
-<span class="ansi-green-intense-fg ansi-bold">     33</span> from pandas._libs.lib import no_default
-<span class="ansi-green-intense-fg ansi-bold">     34</span> from pandas._typing import (
-<span class="ansi-green-intense-fg ansi-bold">     35</span>     AggFuncType,
-<span class="ansi-green-intense-fg ansi-bold">     36</span>     ArrayLike,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     47</span>     npt,
-<span class="ansi-green-intense-fg ansi-bold">     48</span> )
-
-File <span class="ansi-green-fg">&lt;frozen importlib._bootstrap&gt;:398</span>, in <span class="ansi-cyan-fg">parent</span><span class="ansi-blue-fg">(self)</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -1038,6 +880,67 @@ None
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="c1"># Video game data can be swapped out for inventory data in my cpt to make something that actually relates to me</span>
+<span class="c1">#read video game stats of characters and their stats to see the best ones, sorted by winrate</span>
+<span class="n">dataFrame</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/lolstats.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Win %'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"-------------------Top 10 Top Lane Champions-------------------</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataFrame</span><span class="p">[</span><span class="n">dataFrame</span><span class="o">.</span><span class="n">Role</span> <span class="o">==</span> <span class="s2">"TOP"</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">dataFrame</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'Trend'</span><span class="p">,</span> <span class="s1">'Score'</span><span class="p">])]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="c1"># [df.Role == "TOP"] limits data to characters in the "Top lane" role, which is the role I play in the game</span>
+<span class="c1"># .loc removes unnecessary columns that tell me nothing</span>
+<span class="c1"># head(10) shows the top 10 "champions" (characters)</span>
+<span class="c1"># to_string(index=False) removes index numbers</span>
+
+<span class="c1"># Another useful command is:</span>
+<span class="c1"># print(dataFrame[(dataFrame.Role == "TOP") &amp; ((dataFrame.Tier == "S+") | (dataFrame.Tier == "S"))].loc[:, ~dataFrame.columns.isin(['Trend', 'Score'])].head(10).to_string(index=False))</span>
+<span class="c1"># This limits the selection to only high tier characters </span>
+<span class="c1"># Tier determines the potential of a character, descending in order of S+, S, A, B, C, D</span>
+
+<span class="c1"># With this information, I now know which characters to play in the game to win the most</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-------------------Top 10 Top Lane Champions-------------------
+
+       Name    Class Role Tier  Win % Role % Pick %  Ban %  KDA
+       Kled  Fighter  TOP    A 52.73% 90.09%  2.42%  1.27% 2.36
+       Olaf  Fighter  TOP    S 52.53% 85.86%  3.38%  3.01% 1.87
+  Dr. Mundo Marksman  TOP    A 52.49% 87.61%  2.84%  3.91% 1.91
+       Shen     Tank  TOP    S 52.14% 87.34%  4.23%  0.95% 3.02
+     Singed     Tank  TOP    A 52.01% 72.80%  1.79%  0.57% 2.04
+Mordekaiser  Fighter  TOP   S+ 51.79% 73.51%  6.39% 13.07% 1.92
+       Sion     Tank  TOP    S 51.64% 84.73%  5.19%  1.18% 1.82
+        Jax  Fighter  TOP   S+ 51.62% 88.63% 11.05% 25.09% 1.73
+       Ornn     Tank  TOP    S 51.58% 93.13%  3.60%  0.52% 2.47
+     Yorick  Fighter  TOP    A 51.49% 91.38%  3.50%  3.45% 1.57
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1578,7 +1481,7 @@ Please also refer to the documentation for alternative solver options:
 
 
 
-  </div><a class="u-url" href="/CS_Swag/2023/03/08/pandas.html" hidden></a>
+  </div><a class="u-url" href="/CS_Swag/jupyter/pandas" hidden></a>
 </article>
 
       </div>
