@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: This is easily the worst game I've made!
-categories: [markdown]
+categories: [markdown, projects]
 title: RGB Guesser
 ---
 <style>
