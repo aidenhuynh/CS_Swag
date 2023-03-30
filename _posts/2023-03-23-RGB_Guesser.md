@@ -52,6 +52,7 @@ title: RGB Guesser
     .mainTable {
         font-family: "gill sans", sans-serif;
         table-layout: fixed;
+        width: 57.625em;
     }
 
     .titleText {
