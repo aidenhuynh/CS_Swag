@@ -4,6 +4,7 @@ layout: post
 description: This is easily the worst game I've made! (and the most effortful one)
 categories: [markdown, projects]
 title: RGB Guesser
+image: /images/rgblogo.png
 ---
 <style>
     button {
