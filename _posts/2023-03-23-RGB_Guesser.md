@@ -144,6 +144,7 @@ var totalSum = 0
 var hints = 0
 var rgb = [0, 0, 0]
 var submit = ""
+const scoreMultiplier = 1000
 
 const buttons = ["hintR", "hintG", "hintB"]
 const table = document.getElementById('mainTable')
@@ -203,9 +204,7 @@ const defaultTable = `
             </td> \
         </tr> \
         `
-
-function start() {
-    table.innerHTML = ` \
+const difficultySelectTable = ` \
         <tr>
             <th class="titleText" colspan="4">
                 <span class="red">R</span><span class="green">G</span><span class="blue">B</span>
@@ -226,6 +225,9 @@ function start() {
             </td>
         </tr>
     `
+
+function start() {
+    table.innerHTML = difficultySelectTable
 }
 
 function difficultySelect(count) {
@@ -316,11 +318,11 @@ function calculateScore(input) {
         sum += (100 - (100 * Math.abs((guess - actual)/255)))
     }
     
-    return 1000 * (sum/3)
+    return scoreMultiplier * (sum/3)
 }
 
 function calculateTotalScore() {
-    return 1000 * calculateAvgAcc()
+    return scoreMultiplier * calculateAvgAcc()
 }
 
 function validateInput(input) {
