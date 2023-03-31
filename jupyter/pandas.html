@@ -900,8 +900,12 @@ None
 <span class="c1"># head(10) shows the top 10 "champions" (characters)</span>
 <span class="c1"># to_string(index=False) removes index numbers</span>
 
+
+
 <span class="c1"># Another useful command is:</span>
+
 <span class="c1"># print(dataFrame[(dataFrame.Role == "TOP") &amp; ((dataFrame.Tier == "S+") | (dataFrame.Tier == "S"))].loc[:, ~dataFrame.columns.isin(['Trend', 'Score'])].head(10).to_string(index=False))</span>
+
 <span class="c1"># This limits the selection to only high tier characters </span>
 <span class="c1"># Tier determines the potential of a character, descending in order of S+, S, A, B, C, D</span>
 
