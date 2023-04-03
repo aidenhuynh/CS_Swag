@@ -506,14 +506,177 @@ PRODUCER:
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">thenownow</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;The Now Now&quot;</span><span class="p">,</span>
     <span class="s2">&quot;artist&quot;</span><span class="p">:</span><span class="s2">&quot;Gorillaz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span><span class="mi">2018</span><span class="p">,</span>
+    <span class="s2">&quot;genres&quot;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
     <span class="s2">&quot;tracks&quot;</span><span class="p">:[</span>
-        
-    <span class="p">],</span>
-    
+        <span class="s2">&quot;funk&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;synth-pop&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;psychadelic pop&quot;</span>
+        <span class="p">]</span>
 <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">thenownow</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;name&#39;: &#39;The Now Now&#39;, &#39;artist&#39;: &#39;Gorillaz&#39;, &#39;year&#39;: 2018, &#39;genres&#39;: False, &#39;tracks&#39;: [&#39;funk&#39;, &#39;synth-pop&#39;, &#39;psychadelic pop&#39;]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Oh no! I've accidentally forgotten all of the tracks, set genres equal to False, and set the tracks to the genres!</p>
+<p>Also the formatting sucks!!!!!</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Humility&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tranz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hollywood&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Kansas&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sorcererz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Idaho&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Lake Zurich&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Magic City&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Fire Flies&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;One Percent&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Souk Eye&quot;</span>
+    <span class="p">]</span>
+
+<span class="c1"># Set the genres equal to what tracks currently is, which is the actual genres</span>
+<span class="n">thenownow</span><span class="p">[</span><span class="s2">&quot;genres&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">thenownow</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span>
+
+<span class="c1"># Set the tracks equal to the list of actual tracks</span>
+<span class="n">thenownow</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tracks</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">thenownow</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;name&#39;: &#39;The Now Now&#39;, &#39;artist&#39;: &#39;Gorillaz&#39;, &#39;year&#39;: 2018, &#39;genres&#39;: [&#39;funk&#39;, &#39;synth-pop&#39;, &#39;psychadelic pop&#39;], &#39;tracks&#39;: [&#39;Humility&#39;, &#39;Tranz&#39;, &#39;Hollywood&#39;, &#39;Kansas&#39;, &#39;Sorcererz&#39;, &#39;Idaho&#39;, &#39;Lake Zurich&#39;, &#39;Magic City&#39;, &#39;Fire Flies&#39;, &#39;One Percent&#39;, &#39;Souk Eye&#39;]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hooray! The information is correct now! But the formatting still stuck!!!!!!!</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">albumSearch</span><span class="p">():</span>
+    <span class="c1"># Keep exact search to return to user in text</span>
+    <span class="n">exactSearch</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter search or press Escape to exit (Name, artist, year, genres, or tracks)&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Lower actual search to show results even if capitalization is different</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="n">exactSearch</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You searched for: &quot;&#39;</span> <span class="o">+</span> <span class="n">exactSearch</span> <span class="o">+</span> <span class="s1">&#39;&quot;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Back out if Escape is pressed or nothing is entered</span>
+    <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">return</span>
+    
+    <span class="c1"># Loop function if no result is found</span>
+    <span class="k">elif</span> <span class="n">thenownow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Results not found, please try again</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+        <span class="n">albumSearch</span><span class="p">()</span>
+    
+    <span class="c1"># If results are found, state category of result before items in result  </span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Results found</span><span class="se">\n\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">search</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># If result is a list, iterate through and print each item</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">thenownow</span><span class="p">[</span><span class="n">search</span><span class="p">])</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">thenownow</span><span class="p">[</span><span class="n">search</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   &quot;</span> <span class="o">+</span> <span class="n">item</span><span class="p">)</span>
+        
+        <span class="c1"># If result is not a list, print item</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   &quot;</span> <span class="o">+</span> <span class="n">thenownow</span><span class="p">[</span><span class="n">search</span><span class="p">])</span>
+            
+<span class="n">albumSearch</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You searched for: &#34;tracks&#34;
+
+Results found
+
+TRACKS:
+   Humility
+   Tranz
+   Hollywood
+   Kansas
+   Sorcererz
+   Idaho
+   Lake Zurich
+   Magic City
+   Fire Flies
+   One Percent
+   Souk Eye
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
