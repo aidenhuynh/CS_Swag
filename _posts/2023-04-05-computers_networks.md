@@ -16,10 +16,10 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieves and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz: 1.6 GHz
-- Memory in GB: 8 GB 1600 MHz
-- Storage in GB: 121.12 GB
-- OS: macOS Monterey
+- Processor GHz: ``1.6 GHz``
+- Memory in GB: ``8 GB 1600 MHz``
+- Storage in GB: ``121.12 GB``
+- OS: ``macOS Monterey``
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices
@@ -33,7 +33,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Inspect Variables
 
 
-![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
+![Computer Hardware](https://nighthawkcoders.github.io/APCSP/images/cpu.jpeg)
 
 
 ### The Internet
@@ -50,17 +50,17 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path: Sequence of connected computing devices that begins at sender and ends at receiver
+    - Route: The process of finding a path between sender and receiver
+    - Computer System: A group of computing devices and programs working together
+    - Computer Device: A physical artifact that can run programs
+    - Bandwidth: The maximum amount of data that can be sent within a certain time frame
+    - Computer Network: A group of interconnected computing devices capable of sending and receiving data between each other
 
 > Watch/review College Board Daily Video 4.1.2
 
 - Essential Knowledge
-    - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
+    - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprietary) communication protocols.
     - Access to the internet depends on the ability to connect a computing device to an internet connected device.
     - A protocol is an agreed-upon set of rules that specify the behavior of a system.
     - The protocols used in the internet are open, which allows users to easily connect additional computing devices to the internet.
@@ -77,18 +77,28 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).
 
+![web diagram]({{site.baseurl}}/images/wwwdiagram.png)
+
 - Complete True of False Questions
+    1. True
+    2. False
+    3. False
+    4. True
+    5. False
+    6. False
+    7. True
 
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
+A fault tolerant network is a network in which if one connection between computing devices goes down, a path can still be made between all of the computing devices in the network. While this makes networks more reliable in the case of an accident, it is also more resource intensive as it requires more resources to make more connections between the computers.
 
 ### Parallel and Distributed Computing
-> Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
+> Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
-- What is naturally Distributed in Frontend/Backend archeticture?  
+- What is naturally Distributed in Frontend/Backend architecture?  
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
