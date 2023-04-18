@@ -66,7 +66,10 @@ title: Base64 Defusal
                 DEFUSAL
             </div>
         </div>
-        <div class="codeContainer">
+        <div class="difficultyList">
+            <div class="difficulty" onclick="difficultySelect(10)">EASY (10 MIN)</div>
+            <div class="difficulty" onclick="difficultySelect(5)">MEDIUM (5 MIN)</div>
+            <div class="difficulty" onclick="difficultySelect(1)">HARD (1 MIN)</div>
         </div>
     </div>
     <div class="container3">
@@ -74,6 +77,63 @@ title: Base64 Defusal
         <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
         <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
     </div>
+</div>
+
+<div class="container" style="display: none" id="winScreen">
+    <div class="container2">
+        <div class="timerContainer">
+            <div class="startText">YOU WIN!</div>
+        </div>
+        <div class="codeContainer">
+            <div class="defusal">
+                <div class="screen">
+                    TIME REMAINING:
+                    <br><br>
+                    <span id="winTime"></span>
+                </div>
+                <div class="codeInput" id="winCode"></div>
+            </div>
+            <div class="keypad">
+                <div class="restart" onclick="restart('win')">RESTART</div>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="options1" onclick="modalOpen('tutorial')">TUTORIAL</div>
+        <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
+        <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
+    </div>
+</div>
+
+<div class="container" style="display: none" id="lossScreen">
+    <div class="container2">
+        <div class="timerContainer">
+            <div class="startText">YOU LOSE!</div>
+        </div>
+        <div class="codeContainer">
+            <div class="defusal">
+                <div class="screen">
+                    <span id="lossText"></span>
+                    <br>
+                    <span id="lossTime"></span>
+                </div>
+                <div class="codeInput" id="lossCode"></div>
+            </div>
+            <div class="keypad">
+                <div class="restart" onclick="restart()">RESTART</div>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="options1" onclick="modalOpen('tutorial')">TUTORIAL</div>
+        <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
+        <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
+    </div>
+</div>
+
+<div id="tutorial" class="modal">
+    <span onclick="modalClose('tutorial')" class="close">&times;</span>
+    <img class="modal-content" src="{{site.baseurl}}/images/Base64_Defusal/base64_guide.png">
 </div>
 
 <div id="base64" class="modal">

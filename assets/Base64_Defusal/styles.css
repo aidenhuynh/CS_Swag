@@ -38,6 +38,38 @@
     justify-content: space-around;
 }
 
+.difficultyList {
+    margin: auto;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.difficultyList .difficulty {
+    width: 50%;
+    height: 25%;
+    background-color: rgb(67, 67, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", 'Courier New', Courier, monospace;
+    color: rgb(191, 0, 0);
+    font-size: 2em;
+    text-align: center;
+    flex-direction: column;
+    border: solid 3px rgb(153, 153, 153);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.difficultyList .difficulty:active {
+    filter: brightness(90%);
+    transition: filter 0.1s
+}
+
 .timer {
     display: flex;
     justify-content: center;
@@ -143,13 +175,31 @@
     cursor: pointer;
 }
 
+.restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 204, 204);
+    border: solid 1px rgb(153, 153, 153);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.5em
+}
+
+.restart:active {
+    filter: brightness(90%);
+    transition: filter 0.1s
+}
+
 .code {
     letter-spacing:2px
 }
 
 .keypad .data:active {
     filter: brightness(90%);
-    transition: filter 0.2s
+    transition: filter 0.1s
 }
 
 .keypad .row  {
@@ -194,7 +244,7 @@
 
 .container3 div:active {
     filter: brightness(90%);
-    transition: filter 0.2s
+    transition: filter 0.1s
 }
 
 .options1 {
