@@ -120,7 +120,7 @@ title: Base64 Defusal
                 <div class="codeInput" id="lossCode"></div>
             </div>
             <div class="keypad">
-                <div class="restart" onclick="restart()">RESTART</div>
+                <div class="restart" onclick="restart('loss')">RESTART</div>
             </div>
         </div>
     </div>
