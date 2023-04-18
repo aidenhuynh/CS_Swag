@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -118,10 +118,14 @@ window.onload = wrap_img;
 
 <p>List specification of your Computer, or Computers if working as Pair/Trio</p>
 <ul>
-  <li>Processor GHz: 1.6 GHz</li>
-  <li>Memory in GB: 8 GB 1600 MHz</li>
-  <li>Storage in GB: 121.12 GB</li>
-  <li>OS: macOS Monterey</li>
+  <li>Processor GHz: <code class="language-plaintext highlighter-rouge">1.6 GHz</code>
+</li>
+  <li>Memory in GB: <code class="language-plaintext highlighter-rouge">8 GB 1600 MHz</code>
+</li>
+  <li>Storage in GB: <code class="language-plaintext highlighter-rouge">121.12 GB</code>
+</li>
+  <li>OS: <code class="language-plaintext highlighter-rouge">macOS Monterey</code>
+</li>
 </ul>
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
@@ -137,7 +141,7 @@ window.onload = wrap_img;
   <li>Inspect Variables</li>
 </ul>
 
-<p><img src="/CS_Swag/images/cpu.jpeg" alt="Computer Hardware"></p>
+<p><img src="https://nighthawkcoders.github.io/APCSP/images/cpu.jpeg" alt="Computer Hardware"></p>
 
 <h3 id="the-internet">
 <a class="anchor" href="#the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Internet</h3>
@@ -160,12 +164,12 @@ window.onload = wrap_img;
   </li>
   <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.
     <ul>
-      <li>Path</li>
-      <li>Route</li>
-      <li>Computer System</li>
-      <li>Computer Device</li>
-      <li>Bandwidth</li>
-      <li>Computer Network</li>
+      <li>Path: Sequence of connected computing devices that begins at sender and ends at receiver</li>
+      <li>Route: The process of finding a path between sender and receiver</li>
+      <li>Computer System: A group of computing devices and programs working together</li>
+      <li>Computer Device: A physical artifact that can run programs</li>
+      <li>Bandwidth: The maximum amount of data that can be sent within a certain time frame</li>
+      <li>Computer Network: A group of interconnected computing devices capable of sending and receiving data between each other</li>
     </ul>
   </li>
 </ul>
@@ -177,7 +181,7 @@ window.onload = wrap_img;
 <ul>
   <li>Essential Knowledge
     <ul>
-      <li>The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.</li>
+      <li>The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprietary) communication protocols.</li>
       <li>Access to the internet depends on the ability to connect a computing device to an internet connected device.</li>
       <li>A protocol is an agreed-upon set of rules that specify the behavior of a system.</li>
       <li>The protocols used in the internet are open, which allows users to easily connect additional computing devices to the internet.</li>
@@ -193,10 +197,23 @@ window.onload = wrap_img;
       <li>The world wide web uses the internet</li>
     </ul>
   </li>
-  <li>
-    <p>Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).</p>
+  <li>Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).</li>
+</ul>
+
+<p><img src="/CS_Swag/images/wwwdiagram.png" alt="web diagram"></p>
+
+<ul>
+  <li>Complete True of False Questions
+    <ol>
+      <li>True</li>
+      <li>False</li>
+      <li>False</li>
+      <li>True</li>
+      <li>False</li>
+      <li>False</li>
+      <li>True</li>
+    </ol>
   </li>
-  <li>Complete True of False Questions</li>
 </ul>
 
 <h3 id="fault-tolerance">
@@ -209,15 +226,17 @@ window.onload = wrap_img;
   <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
 </ul>
 
+<p>A fault tolerant network is a network in which if one connection between computing devices goes down, a path can still be made between all of the computing devices in the network. While this makes networks more reliable in the case of an accident, it is also more resource intensive as it requires more resources to make more connections between the computers.</p>
+
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
 <blockquote>
-  <p>Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks…</p>
+  <p>Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks…</p>
 </blockquote>
 
 <ul>
   <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+    <p>What is naturally Distributed in Frontend/Backend architecture?</p>
   </li>
   <li>
     <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
