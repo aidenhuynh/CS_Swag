@@ -17,7 +17,7 @@ function random(min, max) {
 
 function generateCode() {
     // Create variable for unencoded code to be used later
-    unencoded = ""
+    var unencoded = ""
 
     // Concatenate 4 random digits to unencoded variable to create code
     for (let i = 0; i < 4; i++) {
@@ -49,6 +49,7 @@ function keypad(input) {
             return
         }
 
+        // If there are 4/4 digits, enter the guessed code
         else {
             enter()
         }
@@ -92,7 +93,9 @@ function keypad(input) {
 }
 
 function enter() {
-    if (codeGuess == unencoded) {
+    // If the code equals the unencoded code then win, otherwise win
+    if (codeGuess == atob(encoded)) {
+        // Use atob instead of a variable for unencoded to better hide it from inspect element
         win()
     }
 
@@ -125,9 +128,31 @@ function modalClose(type) {
     document.getElementById(type).style.display = "none"
 }
 
-function sleep(ms) {
-    // Currently unused sleep function if I want it later (I probably will)
-    return new Promise(resolve => setTimeout(resolve, ms));
+function updateTime(type, timerArray, time) {
+    // Update indexes of timer based on whether minutes or seconds
+    if (type == "min") {
+        var a = 0
+        var b = 1
+    }
+
+    else if (type == "sec") {
+        var a = 3
+        var b = 4
+    }
+
+    // Turn time into a string then an array
+    time = time.toString().split('')
+    
+    // Update timer list to match time, accounting for 2 digit time amounts
+    if (time.join('') < 10) {
+        timerArray[a] = 0
+        timerArray[b] = time[0]
+    }
+
+    else {
+        timerArray[a] = time[0]
+        timerArray[b] = time[1]
+    }
 }
 
 function countdown(maxMinutes) {
@@ -151,22 +176,8 @@ function countdown(maxMinutes) {
 
     // Initialize timer on UI instead of just allowing loop to do it because otherwise it would take 1 sec
 
-    // Convert starting minutes to a string then an array
-    minutes = minutes.toString().split('')
-            
-    // Use values from minutes array to update timer as an array, accounting for first 0 if < 10 mins
-    if (minutes.join('') < 10) {
-        timerArray[0] = 0
-        timerArray[1] = minutes[0]
-    }
-
-    else {
-        timerArray[0] = minutes[0]
-        timerArray[1] = minutes[1]
-    }
-
-    // Turn minutes back into a string to be used later
-    minutes = minutes.join('')
+    // Update the timerArray to match minutes using function
+    updateTime("min", timerArray, minutes)
 
     // Update the UI timer to match the array
     timer.innerHTML = timerArray.join('')
@@ -175,14 +186,8 @@ function countdown(maxMinutes) {
         if (iterations % 60 == 0) {
             // Iterations = seconds passed, thus maxMinutes * 60 = maximum iterations for the timer to complete
             if (iterations == maxMinutes * 60) {
-                // Stop the loop/interval when time is up
-                clearInterval(secondInterval)
-
-                // Hide the game UI
-                document.getElementById('bomb').style.display = "none"
-
-                // Show the loss screen
-                document.getElementById('lossScreen')
+                // Lose the game due to time up
+                loss("time")
 
                 // Return nothing to stop the rest of the loop from running
                 return
@@ -190,22 +195,9 @@ function countdown(maxMinutes) {
 
             // Pass one minute if 60 iterations (seconds) pass
             minutes -=1
-
-            // Update minutes using same process as before
-            minutes = minutes.toString().split('')
             
-            if (minutes.join('') < 10) {
-                timerArray[0] = 0
-                timerArray[1] = minutes[0]
-            }
-
-            else {
-                timerArray[0] = minutes[0]
-                timerArray[1] = minutes[1]
-            }
-
-            // Turn minutes back into a string to be subtractable back at the start of the loop
-            minutes = minutes.join('')
+            // Update timerArray to match minutes
+            updateTime("min", timerArray, minutes)
 
             // Update the UI timer to match the array
             timer.innerHTML = timerArray.join('')
@@ -223,20 +215,10 @@ function countdown(maxMinutes) {
         seconds -= 1
 
         // Same process as minutes but for seconds
-        seconds = seconds.toString().split('')
         timerArray = timer.innerHTML.split('')
 
-        if (seconds < 10) {
-            timerArray[3] = 0
-            timerArray[4] = seconds[0]
-        }
+        updateTime("sec", timerArray, seconds)
 
-        else {
-            timerArray[3] = seconds[0]
-            timerArray[4] = seconds[1]
-        }
-
-        seconds = seconds.join('')
         timer.innerHTML = timerArray.join('')
     }, 1000)
 }
@@ -248,6 +230,15 @@ function restart(type) {
 
     // Show start screen
     document.getElementById('startScreen').style.display = ""
+
+    // Reset timer to default
+    document.getElementById('timer').innerHTML = "00:00"
+
+    // Reset inputted code to default
+    codeGuess = ""
+
+    // Reset inputted code on UI to default
+    document.getElementById('codeInput').innerHTML = "____"
 }
 
 function win() {
@@ -267,15 +258,18 @@ function win() {
     document.getElementById('winTime').innerHTML = time
 
     // Show correct code
-    document.getElementById('winCode').innerHTML = unencoded
+    document.getElementById('winCode').innerHTML = atob(encoded)
 }
 
 function loss(type) {
+    // Stop the timer
+    clearInterval(secondInterval)
+
     // Get time of loss before hiding game UI
     var time = document.getElementById('timer').innerHTML
 
     // Define initial time
-    var initialTime = []
+    var initialTime = ["0", "0", ":", "0", "0"]
 
     // Define minutes as initial minutes using old code
     var minutes = initialMinutes
@@ -287,7 +281,7 @@ function loss(type) {
     document.getElementById('lossScreen').style.display = ""
 
     // Show correct code
-    document.getElementById('lossCode').innerHTML = unencoded
+    document.getElementById('lossCode').innerHTML = atob(encoded)
 
     // If reason for losing is wrong code, show time of loss
     if (type == "wrong code") {
@@ -299,20 +293,9 @@ function loss(type) {
     }
 
     // If reason for losing is time, show initial time
-    else {
-        // Convert starting minutes to a string then an array
-        minutes = minutes.toString().split('')
-                    
-        // Use values from minutes array to update timer as an array, accounting for first 0 if < 10 mins
-        if (minutes.join('') < 10) {
-            initialTime[0] = 0
-            initialTime[1] = minutes[0]
-        }
-
-        else {
-            initialTime[0] = minutes[0]
-            initialTime[1] = minutes[1]
-        }
+    else if (type == "time") {
+        // Update minutes of initial time to match
+        updateTime("min", initialTime, minutes)
 
         // Update the text to match the array
         document.getElementById('lossTime').innerHTML = initialTime.join('')

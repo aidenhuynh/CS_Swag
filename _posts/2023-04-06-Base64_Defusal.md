@@ -151,5 +151,4 @@ title: Base64 Defusal
     <div class="modal-content"><textarea cols="100" rows="25"></textarea></div>
 </div>
 
-
 <script type="text/javascript" src="{{site.baseurl}}/assets/Base64_Defusal/script.js"></script>
