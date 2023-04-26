@@ -165,7 +165,7 @@
     background-color: rgb(204, 204, 204);
     border: solid 2px rgb(153, 153, 153);
     margin: 0;
-    width: 33.3333%;
+    width: calc(100% / 3);
     height: 100%;
     border-top: 0;
     border-bottom: 0;
@@ -319,4 +319,52 @@
     filter: brightness(80%);
     text-decoration: none;
     cursor: pointer;
+}
+
+.leaderboardContainer {
+    height: 40em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 50em;
+    height:15%;
+    border: solid 3px rgb(67, 67, 67);
+}
+
+.tabs div:nth-child(even) {
+    border: none;
+    border-right: solid 3px rgb(67, 67, 67);
+    border-left: solid 3px rgb(67, 67, 67);
+}
+
+.tab {
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: rgb(153, 153, 153);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-family: "Orbitron", 'Courier New', Courier, monospace;
+    color: rgb(56, 118, 29);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.leaderboard {
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    width: 50em;
+    background-color: rgb(153, 153, 153);
+    border: solid 3px rgb(63, 63, 63);
+    border-top: none;
 }

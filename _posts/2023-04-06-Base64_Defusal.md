@@ -74,7 +74,7 @@ title: Base64 Defusal
     </div>
     <div class="container3">
         <div class="options1" onclick="modalOpen('tutorial')">TUTORIAL</div>
-        <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
+        <div class="options2" onclick="modalOpen('rankings')">RANKINGS</div>
         <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
     </div>
 </div>
@@ -100,7 +100,7 @@ title: Base64 Defusal
     </div>
     <div class="container3">
         <div class="options1" onclick="modalOpen('tutorial')">TUTORIAL</div>
-        <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
+        <div class="options2" onclick="modalOpen('rankings')">RANKINGS</div>
         <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
     </div>
 </div>
@@ -126,7 +126,7 @@ title: Base64 Defusal
     </div>
     <div class="container3">
         <div class="options1" onclick="modalOpen('tutorial')">TUTORIAL</div>
-        <div class="options2" onclick="modalOpen('leaderboards')">RANKINGS</div>
+        <div class="options2" onclick="modalOpen('rankings')">RANKINGS</div>
         <div class="options3" onclick="window.open('https://www.base64decode.org/')">DECODER</div>
     </div>
 </div>
@@ -134,6 +134,21 @@ title: Base64 Defusal
 <div id="tutorial" class="modal">
     <span onclick="modalClose('tutorial')" class="close">&times;</span>
     <img class="modal-content" src="{{site.baseurl}}/images/Base64_Defusal/base64_guide.png">
+</div>
+
+<div id="rankings" class="modal">
+    <span onclick="modalClose('rankings')" class="close">&times;</span>
+    <div class="modal-content">
+        <div class="leaderboardContainer">
+            <div class="tabs">
+                <div class="tab" id="easyTab" onclick="showTab(0)">EASY</div>
+                <div class="tab" id="mediumTab" onclick="showTab(1)">MEDIUM</div>
+                <div class="tab" id="hardTab" onclick="showTab(2)">HARD</div>
+            </div>
+            <div class="leaderboard" id="leaderboard">
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="base64" class="modal">
