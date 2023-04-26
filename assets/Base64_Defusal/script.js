@@ -304,3 +304,33 @@ function loss(type) {
         document.getElementById('lossText').innerHTML = "TIME TAKEN:"
     }
 }
+
+function showTab(difficulty) {
+    // Define a list for the different difficulty levels
+    var difficulties = ["easy", "medium", "hard"]
+
+    // Iterate through each difficulty
+    for (let i = 0; i < difficulties.length; i++) {
+        // Get the specific tab for the difficulty
+        var tab = document.getElementById(difficulties[i] + "Tab")
+
+        // If the difficulty matches the one clicked, darken the background, and show leaderboard
+        if (i == difficulty) {
+            tab.style.backgroundColor = "rgb(123, 123, 123)"
+        }
+
+        // Otherwise set to default color and hide other leaderboards
+        else {
+            tab.style.backgroundColor = "rgb(153, 153, 153)"
+        }
+    }
+
+    document.getElementById("leaderboard").innerHTML = makeLeaderboard(difficulty)
+
+}
+
+function makeLeaderboard(difficulty) {
+    var leaderboard = {}
+
+    fetch
+}
