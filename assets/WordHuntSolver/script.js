@@ -40,12 +40,9 @@ function nextLetter(id) {
     
     // Get the column position from the id
     var c = Number(id.slice(4, 5))
-    
-    console.log(r + "  " + c)
 
     // If at the last letter (bottom-right)
     if (r == 3 && c == 3) {
-        console.log("end")
         return
     }
 
@@ -259,8 +256,7 @@ function solve(board, list) {
     for (let i = 0; i < solutions.length; i ++) {
         document.getElementById("solutions").innerHTML += "<li>" + solutions[i] + "</li>"
     }
-
-    console.log(solutions)
 }
 
+// Get words on start and add events to each letter
 getWords(); letterEvents(4, 4)
