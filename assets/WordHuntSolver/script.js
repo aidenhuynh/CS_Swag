@@ -8,7 +8,7 @@ function getWords() {
     .then(response => response.text())
     .then(list => {
         // Convert to array
-        wordList = list.split("\r\n")
+        wordList = list.split("\n")
     })
 }
 
