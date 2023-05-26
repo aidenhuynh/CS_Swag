@@ -1,0 +1,110 @@
+button {
+    box-sizing: border-box;
+    border-radius: .4em;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 1.25em;
+    margin: 0;
+    outline: none;
+    padding: .5em .8em;
+    position: relative;
+    width: 35%;
+}
+
+.submit {
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+    color: #181818;
+    border: 1px solid rgb(191, 191, 191)
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: .4em;
+    border-style: none;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 1.25em;
+    margin: 0;
+    outline: none;
+    padding: .5em .8em;
+    position: relative;
+    width: 100%;
+}
+
+button:hover {
+    filter: brightness(80%);
+    transition: filter 0.2s;
+}
+
+.mainTable {
+    font-family: "gill sans", sans-serif;
+    table-layout: fixed;
+    width: 57.625em;
+}
+
+.titleText {
+    font-size: 5em;
+    line-height: .5em;
+    padding-top: .5em;
+    padding-bottom: .3em;
+}
+
+.textBox {
+    text-align: center;
+    border-bottom: none
+}
+
+.buttons {
+    text-align: center;
+    border-top: none;
+}
+
+.subtext {
+    font-family: "brush script mt", cursive;
+    font-size: 0.5em;
+}
+
+.mainDiv {
+    background-color:
+}
+
+.colorBox {
+    width: 50%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2.5em
+}
+
+.red {
+    color: rgb(204, 0, 0);
+}
+
+.redBox {
+    background-color: rgb(204, 0, 0);
+}
+
+.green {
+    color: rgb(106, 168, 79);
+}
+
+.greenBox {
+    background-color: rgb(106, 168, 79);
+}
+
+.blue {
+    color: rgb(60, 120, 216);
+}
+
+.blueBox {
+    background-color: rgb(60, 120, 216);
+    }
+
+.guessCount {
+    font-size:.5em;
+    color: #404040
+}

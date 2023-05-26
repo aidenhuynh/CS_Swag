@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Word Hunt Solver",
-            "content": ". Solutions: .",
+            "content": ". SOLUTIONS INSTRUCTIONS Enter to solve | Right arrow to see next word | Left arrow to see previous word |",
             "url": "https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/WordHuntSolver.html",
             "relUrl": "/markdown/projects/2023/05/11/WordHuntSolver.html",
             "date": " • May 11, 2023"
@@ -234,7 +234,7 @@
     
         ,"post21": {
             "title": "RGB Guesser",
-            "content": "RGB GUESSER This game sucks! . START | .",
+            "content": ". RGB GUESSER This game sucks! . START | .",
             "url": "https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/03/23/RGB_Guesser.html",
             "relUrl": "/markdown/projects/2023/03/23/RGB_Guesser.html",
             "date": " • Mar 23, 2023"

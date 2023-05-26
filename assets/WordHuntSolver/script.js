@@ -1,3 +1,12 @@
+// Global for solved status
+var solved = false
+
+// Make a global variable for solutions
+var solutions = []
+
+// Solution index variable to go to next word
+var solIndex = 0
+
 // Define a list for all Scrabble words from txt file
 var wordList = []
 
@@ -8,7 +17,12 @@ function getWords() {
     .then(response => response.text())
     .then(list => {
         // Convert to array
-        wordList = list.split("\n")
+
+        // Web version
+        // wordList = list.split("\n")
+
+        // Local version
+        wordList = list.split("\r\n")
     })
 }
 
@@ -82,9 +96,24 @@ function makeEvents(id) {
     document.getElementById(id).addEventListener("keyup", function() {
         var value = document.getElementById(id).value
 
-        // If enter is pressed, solve
+        // If enter is pressed
         if (event.key === "Enter") {
-            solve(getInput(4, 4), wordList)
+            // If not solved, solve
+            if (!solved) {
+                solve(getInput(4, 4), wordList)
+            }
+        }
+
+        else if (event.key === "ArrowRight") {
+            if (solved && solIndex !== solutions.length - 1) {
+                shiftWord(1)
+            }
+        }
+
+        else if (event.key === "ArrowLeft") {
+            if (solved && solIndex !== 0) {
+                shiftWord(-1)
+            }
         }
 
         // Check if 2-character input is letters
@@ -135,8 +164,11 @@ function getInput(rows, columns) {
             // Get specific value of letter by row and column
             var letter = document.getElementById("(" + r + ", " + c + ")").value
 
-            // Add value to array
-            input[r].push(letter)
+            // If there was a letter inputted
+            if (letter.length != 0) {
+                // Add value to array
+                input[r].push(letter)
+            }
         }
     }
 
@@ -249,13 +281,25 @@ function wordSort(list) {
     list.reverse()
 }
 
-// Function to return solutions
+// Function to find solutions
 function solve(board, list) {
+    // Check if list has 4 rows
+    if (board.length != 4) {
+        console.log("row")
+        return
+    }
+    
+    // Check if each row has 4 items
+    else if (board[0].length != 4 || board[1].length != 4 || board[2].length != 4 || board[3].length != 4) {
+        console.log("col")
+        return
+    }
+
+    // Set solved to true
+    solved = true
+
     // Define list of filtered words
     var list = filterWords(board, list)
-
-    // Define list for solutions
-    solutions = []
 
     for (let i = 0; i < list.length; i ++) {
         // For each word in the list, define variable
@@ -270,10 +314,23 @@ function solve(board, list) {
     // Sort solutions by word length in descending order
     wordSort(solutions)
 
-    // Show solutions at bottom of page
-    for (let i = 0; i < solutions.length; i ++) {
-        document.getElementById("solutions").innerHTML += "<li>" + solutions[i] + "</li>"
+    // Show the first solution
+    shiftWord(0)
+}
+
+function shiftWord(d) {
+    // Shift right
+    if (d == 1) {
+        solIndex += 1
     }
+
+    // Shift left
+    else if (d == -1) {
+        solIndex -= 1
+    }
+
+    // Set the inner HTML to show word
+    document.getElementById("solution").innerHTML = solutions[solIndex]
 }
 
 // Get words on start and add events to each letter
