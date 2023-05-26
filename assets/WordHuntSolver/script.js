@@ -71,13 +71,13 @@ function letterEvents(rows, columns) {
             var id = "(" + r + ", " + c + ")"
 
             // Add an event listener to each letter input box
-            makeEvent(id)
+            makeEvents(id)
         }
     }
 }
 
 // Function to make event listeners
-function makeEvent(id) {
+function makeEvents(id) {
     // Create event listener for keyup
     document.getElementById(id).addEventListener("keyup", function() {
         var value = document.getElementById(id).value
@@ -87,9 +87,23 @@ function makeEvent(id) {
             solve(getInput(4, 4), wordList)
         }
 
-        // Check if input is a letter
-        else if (/[a-zA-Z]/.test(value)) {
-            // Restrict to one character
+        // Check if 2-character input is letters
+        else if (/[a-zA-Z]/.test(value.slice(0, 1)) && /[a-zA-Z]/.test(value.slice(1, 2))) {
+            // Restrict to one character, overwritting first
+            if (value.length > 1) {
+                value = value.slice(1, 2)
+            }
+
+            // Uppercase value
+            document.getElementById(id).value = value.toUpperCase()
+
+            // Move to next box
+            nextLetter(id)
+        }
+
+        // For one letter inputs
+        else if (/[a-zA-Z]/.test(value.slice(0, 1))) {
+            // Restrict to one character, overwritting second
             if (value.length > 1) {
                 value = value.slice(0, 1)
             }
@@ -99,6 +113,10 @@ function makeEvent(id) {
 
             // Move to next box
             nextLetter(id)
+        }
+
+        else {
+            document.getElementById(id).value = ""
         }
 
     })
