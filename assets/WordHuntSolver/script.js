@@ -19,10 +19,10 @@ function getWords() {
         // Convert to array
 
         // Web version
-        wordList = list.split("\n")
+        // wordList = list.split("\n")
 
         // Local version
-        // wordList = list.split("\r\n")
+        wordList = list.split("\r\n")
     })
 }
 
@@ -116,38 +116,37 @@ function makeEvents(id) {
             }
         }
 
-        // Check if 2-character input is letters
-        else if (/[a-zA-Z]/.test(value.slice(0, 1)) && /[a-zA-Z]/.test(value.slice(1, 2))) {
-            // Restrict to one character, overwritting first
-            if (value.length > 1) {
-                value = value.slice(1, 2)
-            }
-
-            // Uppercase value
-            document.getElementById(id).value = value.toUpperCase()
-
-            // Move to next box
-            nextLetter(id)
+        else if (event.key === "Delete" || event.key === "Backspace") {
+            return
         }
 
-        // For one letter inputs
-        else if (/[a-zA-Z]/.test(value.slice(0, 1))) {
-            // Restrict to one character, overwritting second
-            if (value.length > 1) {
-                value = value.slice(0, 1)
-            }
-
-            // Uppercase value
-            document.getElementById(id).value = value.toUpperCase()
-
-            // Move to next box
-            nextLetter(id)
-        }
-
+        // If a character is enterred
         else {
+            var len = value.length
+
+            // Iterate backwards through input to get last character to first
+            for (let i = len; i >= 0; i --) {
+                // If character is a letter, use that
+                if (/[a-zA-Z]/.test(value.slice(i - 1, i))) {
+                    // Update value and uppercase it
+                    document.getElementById(id).value = value.slice(i - 1, i).toUpperCase()
+
+                    // Move to next box
+                    nextLetter(id)
+
+                    // Stop loop
+                    return
+                }
+            }
+
+            // If there are no characters, set input to blank
             document.getElementById(id).value = ""
         }
+    })
 
+    // Delete input on click
+    document.getElementById(id).addEventListener("click", function() {
+        document.getElementById(id).value = ""
     })
 }
 
@@ -285,13 +284,11 @@ function wordSort(list) {
 function solve(board, list) {
     // Check if list has 4 rows
     if (board.length != 4) {
-        console.log("row")
         return
     }
     
     // Check if each row has 4 items
     else if (board[0].length != 4 || board[1].length != 4 || board[2].length != 4 || board[3].length != 4) {
-        console.log("col")
         return
     }
 
