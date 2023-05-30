@@ -19,10 +19,10 @@ function getWords() {
         // Convert to array
 
         // Web version
-        // wordList = list.split("\n")
+        wordList = list.split("\n")
 
         // Local version
-        wordList = list.split("\r\n")
+        // wordList = list.split("\r\n")
     })
 }
 
