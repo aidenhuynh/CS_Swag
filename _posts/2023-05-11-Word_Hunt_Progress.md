@@ -68,9 +68,9 @@ comments: true
         - Left and right arrow event listeners to show next and previous words (30 min)
 
 ## Version 1.0.0 Released!
-    * Can be found [here](https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/WordHuntSolver.html)
-    * Total time: ~21 hours
+* Can be found [here](https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/WordHuntSolver.html)
+* Total time: ~21 hours
 
 ## Version 1.0.1
-    * Onclick event to delete letters
-    * Document event listener for enter and arrow keys
+* Onclick event to delete letters
+* Document event listener for enter and arrow keys
