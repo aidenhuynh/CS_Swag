@@ -309,6 +309,11 @@ function solve(board, list) {
         }
     }
 
+    // If there are no solutions found, display that by adding it as a solutions
+    if (solutions.length == 0) {
+        solutions.push("No solutions")
+    }
+
     // Sort solutions by word length in descending order
     wordSort(solutions)
 
