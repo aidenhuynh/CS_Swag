@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Word Hunt Solver Progress Log | coolest blog EVER?! (clickbait)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Word Hunt Solver Progress Log" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="free" />
+<meta property="og:description" content="free" />
+<link rel="canonical" href="https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/Word_Hunt_Progress.html" />
+<meta property="og:url" content="https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/Word_Hunt_Progress.html" />
+<meta property="og:site_name" content="coolest blog EVER?! (clickbait)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-11T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Word Hunt Solver Progress Log" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-11T00:00:00-05:00","datePublished":"2023-05-11T00:00:00-05:00","description":"free","headline":"Word Hunt Solver Progress Log","mainEntityOfPage":{"@type":"WebPage","@id":"https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/Word_Hunt_Progress.html"},"url":"https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/Word_Hunt_Progress.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CS_Swag/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aidenhuynh.github.io/CS_Swag/feed.xml" title="coolest blog EVER?! (clickbait)" /><link rel="shortcut icon" type="image/x-icon" href="/CS_Swag/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CS_Swag/">coolest blog EVER?! (clickbait)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CS_Swag/about/">😂😂😂 WHO DID THIS 😂😂😂</a><a class="page-link" href="/CS_Swag/search/">search</a><a class="page-link" href="/CS_Swag/categories/">tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Word Hunt Solver Progress Log</h1><p class="page-description">free</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-11T00:00:00-05:00" itemprop="datePublished">
+        May 11, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CS_Swag/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/CS_Swag/categories/#projects">projects</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#november-2022">November, 2022</a></li>
+<li class="toc-entry toc-h1"><a href="#may-2023">May, 2023</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#version-01-2d-array-3-hr">Version 0.1: 2D Array (3 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-02-node-trie-4-hr">Version 0.2: Node Trie (4 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-03-graphs-1-hr">Version 0.3: Graphs (1 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-040-better-2d-array-5-hr">Version 0.4.0: Better 2D Array (5 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-041-adding-a-ui-4-hr">Version 0.4.1: Adding a UI (4 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-042-optimizing-user-experience-4-hr">Version 0.4.2: Optimizing User Experience (4 hr)</a></li>
+<li class="toc-entry toc-h2"><a href="#version-100-released">Version 1.0.0 Released!</a></li>
+</ul>
+</li>
+</ul><h1 id="november-2022">
+<a class="anchor" href="#november-2022" aria-hidden="true"><span class="octicon octicon-link"></span></a>November, 2022</h1>
+<ul>
+  <li>I want to win word hunt more
+    <ul>
+      <li>most reasonable conclusion: cheat!</li>
+      <li>Winning!</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="may-2023">
+<a class="anchor" href="#may-2023" aria-hidden="true"><span class="octicon octicon-link"></span></a>May, 2023</h1>
+
+<h2 id="version-01-2d-array-3-hr">
+<a class="anchor" href="#version-01-2d-array-3-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.1: 2D Array (3 hr)</h2>
+<ul>
+  <li>Made starter code stuff (1.5 hr)
+    <ul>
+      <li>fetch word list and convert to array (/r/n?)</li>
+      <li>convert input into array</li>
+      <li>check if string is a word (horrible time complexity, iterating through 30,000+ words lol -&gt; most of the time comes from trying to find ways around this)</li>
+    </ul>
+  </li>
+  <li>Attempted to solve using 2D array</li>
+  <li>No idea how to write algorithm (30 min experimenting)</li>
+  <li>Try to sort first (1 hr)
+    <ul>
+      <li>awful time complexity</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-02-node-trie-4-hr">
+<a class="anchor" href="#version-02-node-trie-4-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.2: Node Trie (4 hr)</h2>
+<ul>
+  <li>Looked up how to make trie and made one (2 hr)
+    <ul>
+      <li>Took a while because I commented all code to try to further my own understanding of how it works</li>
+      <li>I still don’t really get it</li>
+    </ul>
+  </li>
+  <li>Implemented depth-first search (2 hr)
+    <ul>
+      <li>Didn’t work as intended</li>
+    </ul>
+  </li>
+  <li>Sorting still takes ages</li>
+</ul>
+
+<h2 id="version-03-graphs-1-hr">
+<a class="anchor" href="#version-03-graphs-1-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.3: Graphs (1 hr)</h2>
+<ul>
+  <li>Looked up a method to solve Boggle (basically the same game) that used a Graph structure
+    <ul>
+      <li>Also don’t know how it works</li>
+      <li>Spent an hour trying to make it then realized there’s no point if I can’t figure out how it works</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-040-better-2d-array-5-hr">
+<a class="anchor" href="#version-040-better-2d-array-5-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.4.0: Better 2D Array (5 hr)</h2>
+<ul>
+  <li>After realizing there’s no point trying different methods if I don’t know how they work, I looked up more methods for solving, and found out that a 2D array is fastest</li>
+  <li>Sorting took ages still, so I experimented with asynch functions (30min)
+    <ul>
+      <li>I found out that the javascript sort function did it basically instantly (wow!) (30 min)</li>
+    </ul>
+  </li>
+  <li>Adapt Geeks4Geeks code and comment everything so that I know that I actually understand how it works (4 hr)
+    <ul>
+      <li>Really cool recursive solve function</li>
+    </ul>
+  </li>
+  <li>It works with test array!</li>
+</ul>
+
+<h2 id="version-041-adding-a-ui-4-hr">
+<a class="anchor" href="#version-041-adding-a-ui-4-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.4.1: Adding a UI (4 hr)</h2>
+<ul>
+  <li>Made a input box and a function to get the letters put into the input box and convert that into a 2D array (30 min)
+    <ul>
+      <li>Didn’t always work -&gt; solution was to uppercase all inputs</li>
+    </ul>
+  </li>
+  <li>After making sure that it would work with any letter combination, I made real UI</li>
+  <li>Flexbox of a 4x4 grid with input boxes with unique IDs (2 hr)</li>
+  <li>Function to convert the inputs to 2D array (30 min)</li>
+  <li>“Enter” event listener to solve and show words at the bottom of the screen (30 min)
+    <ul>
+      <li>Realized that it was showing words alphabetically -&gt; Made a selection sort algorithm from scratch, complexity is probably not optimal lol (30 min)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-042-optimizing-user-experience-4-hr">
+<a class="anchor" href="#version-042-optimizing-user-experience-4-hr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.4.2: Optimizing User Experience (4 hr)</h2>
+<ul>
+  <li>Inputting letter by letter is too slow, wasting time in the game to click on each box
+    <ul>
+      <li>Loop to add event listeners to move to next box on key up (1 hr)
+        <ul>
+          <li>Bugs:
+            <ul>
+              <li>Makes deleting letters hard</li>
+              <li>Multiple letters?</li>
+              <li>Non-letters?</li>
+            </ul>
+          </li>
+          <li>Solution:
+            <ul>
+              <li>If statements and test functions! (2 hr)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Scrolling through words is not convenient
+    <ul>
+      <li>Add another div to display words and instructions (30 min)
+        <ul>
+          <li>Left and right arrow event listeners to show next and previous words (30 min)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-100-released">
+<a class="anchor" href="#version-100-released" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 1.0.0 Released!</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Can be found [here](https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/WordHuntSolver.html)
+* Total time: ~21 hours
+</code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="aidenhuynh/CS_Swag"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/CS_Swag/markdown/projects/2023/05/11/Word_Hunt_Progress.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CS_Swag/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://aidenhuynh.github.io/CS_Swag/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CS_Swag/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>flashfweqofj[spkjsa;lkfe;fdnoeqrghf;sgisglknv;grt3]</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/CS_Swag “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/CS_Swag/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/CS_Swag/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
