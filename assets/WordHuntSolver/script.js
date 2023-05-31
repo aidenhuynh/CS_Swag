@@ -19,10 +19,10 @@ function getWords() {
         // Convert to array
 
         // Web version
-        wordList = list.split("\n")
+        // wordList = list.split("\n")
 
         // Local version
-        // wordList = list.split("\r\n")
+        wordList = list.split("\r\n")
     })
 }
 
@@ -90,12 +90,45 @@ function letterEvents(rows, columns) {
     }
 }
 
-// Function to make event listeners
+// Function to make event listeners for boxes
 function makeEvents(id) {
     // Create event listener for keyup
     document.getElementById(id).addEventListener("keyup", function() {
+        // Define variable for the value of the box
         var value = document.getElementById(id).value
 
+        // If a character is entered
+        var len = value.length
+
+        // Iterate backwards through input to get last character to first
+        for (let i = len; i >= 0; i --) {
+            // If character is a letter, use that
+            if (/[a-zA-Z]/.test(value.slice(i - 1, i))) {
+                // Update value and uppercase it
+                document.getElementById(id).value = value.slice(i - 1, i).toUpperCase()
+
+                // Move to next box
+                nextLetter(id)
+
+                // Stop loop
+                return
+            }
+        }
+
+        // If there are no characters, set input to blank
+        document.getElementById(id).value = ""
+    })
+
+    // Delete input on click
+    document.getElementById(id).addEventListener("click", function() {
+        document.getElementById(id).value = ""
+    })
+}
+
+// Function for events not limited to boxes
+function gameEvents() {
+    // Game controls on whole page
+    document.addEventListener("keyup", function() {
         // If enter is pressed
         if (event.key === "Enter") {
             // If not solved, solve
@@ -115,38 +148,6 @@ function makeEvents(id) {
                 shiftWord(-1)
             }
         }
-
-        else if (event.key === "Delete" || event.key === "Backspace") {
-            return
-        }
-
-        // If a character is enterred
-        else {
-            var len = value.length
-
-            // Iterate backwards through input to get last character to first
-            for (let i = len; i >= 0; i --) {
-                // If character is a letter, use that
-                if (/[a-zA-Z]/.test(value.slice(i - 1, i))) {
-                    // Update value and uppercase it
-                    document.getElementById(id).value = value.slice(i - 1, i).toUpperCase()
-
-                    // Move to next box
-                    nextLetter(id)
-
-                    // Stop loop
-                    return
-                }
-            }
-
-            // If there are no characters, set input to blank
-            document.getElementById(id).value = ""
-        }
-    })
-
-    // Delete input on click
-    document.getElementById(id).addEventListener("click", function() {
-        document.getElementById(id).value = ""
     })
 }
 
@@ -330,5 +331,5 @@ function shiftWord(d) {
     document.getElementById("solution").innerHTML = solutions[solIndex]
 }
 
-// Get words on start and add events to each letter
-getWords(); letterEvents(4, 4)
+// Get words on start and add events
+getWords(); letterEvents(4, 4); gameEvents()
