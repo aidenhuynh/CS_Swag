@@ -71,6 +71,6 @@ comments: true
 * Can be found [here](https://aidenhuynh.github.io/CS_Swag/markdown/projects/2023/05/11/WordHuntSolver.html)
 * Total time: ~21 hours
 
-## Version 1.0.1
+## Version 1.0.1: Minor Convenience Changes
 * Onclick event to delete letters
 * Document event listener for enter and arrow keys

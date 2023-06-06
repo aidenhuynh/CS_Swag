@@ -137,12 +137,14 @@ function gameEvents() {
             }
         }
 
+        // Next word on right arrow
         else if (event.key === "ArrowRight") {
             if (solved && solIndex !== solutions.length - 1) {
                 shiftWord(1)
             }
         }
 
+        // Previous word on left arrow
         else if (event.key === "ArrowLeft") {
             if (solved && solIndex !== 0) {
                 shiftWord(-1)
